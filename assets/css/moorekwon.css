@@ -9,6 +9,7 @@
     }
 
     .text-link {
+        display: inline-block;
         font-size: 1.6rem;
         list-style: none;
         line-height: 24px;
@@ -22,8 +23,9 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        border: 1px solid #aaa;
-        width: 100%;
+        right: 0;
+        height: 1px;
+        background: #aaa;
     }
 
     /* main */
@@ -36,11 +38,16 @@
 
     /* service 섹션 */
     .service {
-        padding: 30px 24px 60px;
+        padding: 30px 0 60px;
         background: skyblue;
     }
 
+    .service-info {
+        margin: 0 0 30px;
+    }
+
     .service-info h2 {
+        margin: 0 0 12px;
         font-size: 3.6rem;
         font-weight: 500;
         color: #000;
@@ -52,15 +59,20 @@
 
     /* ad-video 아티클 */
     .ad-video {
-        padding-bottom: 64px;
+        position: relative;
+        margin-bottom: 94px;
         background: yellowgreen;
     }
 
     .video-info-layer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
         padding: 30px 24px;
     }
     .video-info-layer p {
-        padding-bottom: 12px;
+        margin-bottom: 12px;
         font-size: 2.8rem;
         font-weight: 500;
         color: #fff;
@@ -68,6 +80,7 @@
     }
 
     .youtube-link {
+        margin-bottom: 24px;
         color: #fff;
         font-size: 1.6rem;
         display: block;
@@ -90,7 +103,6 @@
     .video-info-layer .text-link {
         color: #fff;
         font-weight: 500;
-        padding-top: 24px 0 0;
     }
 
     .video-info-layer .text-link::after {
@@ -104,14 +116,13 @@
     /* safety 섹션 */
     .safety {
         background: silver;
-        padding: 30px 24px 0;
     }
 
     .safety-details {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 
-    .safety h2 {
+    .safety-details h2 {
         line-height: 36px;
         font-size: 2.8rem;
         font-weight: 500;
@@ -119,22 +130,33 @@
         margin-bottom: 12px;
     }
 
-    .safety p {
-        color: currentColor;
+    .safety-details p {
         font-size: 1.6rem;
         line-height: 24px;
         font-weight: 400;
         margin-bottom: 12px;
     }
 
+    .safety-bg {
+        padding: 87px 0;
+    }
+
     /* sitemap 정보섹션 */
     .sitemap-info {
         background: skyblue;
-        padding: 30px 24px;
+        padding: 30px 0;
     }
 
     .sitemap-info img {
         padding-bottom: 24px;
+    }
+
+    .sitemap-info div {
+        margin-bottom: 30px;
+    }
+
+    .sitemap-info div:last-child {
+        margin: 0;
     }
 
     .sitemap-info .description dt {
@@ -156,7 +178,7 @@
     /* signup list 섹션 */
     .signup-list {
         background: aqua;
-        padding: 30px 24px;
+        padding: 30px 0;
     }
 
     .signup-list li {
