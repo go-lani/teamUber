@@ -27,8 +27,9 @@
     }
 
     /* main */
-    [role="main"] {
+    #main {
         background: yellow;
+        padding: 0 24px;
     }
 
     /* products 섹션 */
