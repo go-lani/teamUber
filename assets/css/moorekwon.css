@@ -3,8 +3,44 @@
 /* all device */
 
  /* 모바일 해상도일때 */
- @media all and (max-width: 768) {
+ @media all and (max-width: 768px) {
+     /* default 클래스 */
+    * {
+        max-width: 768px;
+    }
 
+    .text-link {
+        background: silver;
+    }
+
+    /* main */
+    [role="main"] {
+         background: yellow;
+     }
+
+     /* products 섹션 */
+     .products {
+         background: pink;
+     }
+
+     /* service 섹션 */
+     .service {
+         background: skyblue;
+     }
+
+     .service-info {
+         background: green;
+     }
+
+     .service-info h2 {
+         background: purple;
+     }
+
+     .service-bg {
+         background: red;
+     }
+
+     /* ad-video 아티클 */
 }
 
  /* 태블릿 해상도일때 */
