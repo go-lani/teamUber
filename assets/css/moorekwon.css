@@ -4,11 +4,6 @@
 
  /* 모바일 해상도일때 */
  @media all and (max-width: 768px) {
-     /* default 클래스 */
-    * {
-        max-width: 768px;
-    }
-
     .text-link {
         background: silver;
     }
