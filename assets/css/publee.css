@@ -1,2 +1,18 @@
 @charset "utf-8";
 
+
+/* all device */
+
+ /* 모바일 해상도일때 */
+ @media all and (max-width: 768) {
+
+}
+
+ /* 태블릿 해상도일때 */
+@media all and (min-width: 769) and (max-width: 1024px) {
+
+}
+
+ /* PC 해상도일때 */
+@media all and (min-width: 1025px) {
+}
