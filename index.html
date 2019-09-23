@@ -9,222 +9,333 @@
 </head>
 <body>
     <header>
-        <h1 class="logo" <a href=""><img src="" alt="uber logo"></a></h1>
-        <ul class="account">
-            <li class="login"><a href="">Log in</a></li>
-            <li class="signup"><a href="">Sign up</a></li>
+        <h1 class="logo">
+            <a href="#self">
+                <svg role="img" viewBox="0 0 154 52" fill="#fff">
+                    <title>Uber</title>
+                    <path d="M8.088 31.704c0 8.136 5.328 13.392 12.384 13.392 6.984 0 12.384-5.4 12.384-13.392V.6h7.56V51h-7.488v-4.68c-3.384 3.528-8.064 5.544-13.32 5.544-10.8 0-19.08-7.848-19.08-19.728V.6h7.56v31.104zM47.832 51V.6h7.272v18.36a18.156 18.156 0 0 1 13.032-5.472c10.8 0 19.296 8.568 19.296 19.224 0 10.584-8.496 19.152-19.296 19.152-5.112 0-9.792-2.088-13.104-5.472V51h-7.2zm7.128-18.288c0 7.056 5.616 12.744 12.672 12.744 6.912 0 12.6-5.688 12.6-12.744 0-7.128-5.688-12.744-12.6-12.744-6.984 0-12.672 5.616-12.672 12.744zm36.792-.072c0-10.368 8.136-19.08 18.864-19.08 10.584 0 18.36 8.136 18.36 19.08v2.376h-29.88c1.008 5.976 5.976 10.44 12.168 10.44 4.248 0 7.848-1.728 10.584-5.4l5.256 3.888c-3.672 4.896-9.144 7.848-15.84 7.848-11.016 0-19.512-8.208-19.512-19.152zm18.72-12.744c-5.4 0-9.936 3.744-11.232 9.36h22.392c-1.224-5.616-5.76-9.36-11.16-9.36zm42.696.864h-3.024c-4.752 0-8.208 3.672-8.208 9.36V51h-7.272V14.28h7.2v4.536c1.8-2.952 4.752-4.824 8.784-4.824h2.52v6.768z"/>
+                </svg>
+            </a>
+        </h1>
+        <ul class="util-list">
+            <li><a href="#self" class="login-btn">Log in</a></li>
+            <li><a href="#self" class="signup-btn">Sign up</a></li>
         </ul>
-        <button class="nav-btn"><img src="" alt=""></button>
+        <button type="button" class="nav-btn">
+            <svg role="img" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                <title>네비게이션</title>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 3H1v3h22V3zm0 7H1v3h22v-3zM1 17h22v3H1v-3z" fill="#ffffff"></path>
+            </svg>
+        </button>
     </header>
 
-    <main>
+    <main role="main">
         <section class="products">
             <h2 class="a11y-hidden">products</h2>
             <ul class="product-list" role="tablist">
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Earn</span></a>
-                    <div>
-                        <h2>Get in the driver's seat and get paid</h2>
-                        <p>Drive on the largest network of active riders.</p>
-                        <a href="" role="button" class="btn-link">Sign up to drive</a>
-                        <a href="" class="more-info">Learn more about driving and delivering</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-graph.svg" alt="">
+                        <span>Earn</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Ride</span></a>
-                    <div>
-                        <h2>Request a ride now</h2>
-                        <div class="enter">
-                            <div class="enter-pickup">
-                                <input type="text" name="pickup" placeholder="Enter pickup location" required>
-                                <a href=""><img src="" alt=""></a>
-                            </div>
-                            <div class="enter-destination">
-                                <input type="text" name="destination" placeholder="Enter destination" required>
-                                <a href="" role="button"><img src="" alt=""></a>
-                            </div>
-                        </div>
-                        <a href="" class="more-info">Learn more about riding</a>
-                        <img src="" alt="map">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-car.svg" alt="">
+                        <span>Ride</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Eat</span></a>
-                    <div>
-                        <h2>Delicious eats, delivered easy</h2>
-                        <p>The restaurants you love, delivered to your door.</p>
-                        <a href="" role="button" class="btn-link">Order now</a>
-                        <a href="" class="more-info">Own a restaurant? Partner with Uber Eats</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-eats.svg" alt="">
+                        <span>Eat</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Freight</span></a>
-                    <div>
-                        <h2>A new direction for freight</h2>
-                        <p>Greater transparency for shippers and carriers to do business together.</p>
-                        <a href="" role="button" class="btn-link">Get shipper details</a>
-                        <a href="" class="more-info">Sign up to be a carrier</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-truck.svg" alt="">
+                        <span>Freight</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Business</span></a>
-                    <div>
-                        <h2>Move your teams and employees</h2>
-                        <p>Uber for Business helps to simplify business travel, expensing, and a customer experiences.
-                        </p>
-                        <a href="" role="button" class="btn-link">Learn more</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-business.svg" alt="">
+                        <span>Business</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Transit</span></a>
-                    <div>
-                        <h2>Public transit in the app</h2>
-                        <p>Plan your transit journey using real-time information and step-by-step directions right in
-                            the app.
-                        </p>
-                        <a href="" role="button" class="btn-link">Learn more</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-subway.svg" alt="">
+                        <span>Transit</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Bike</span></a>
-                    <div>
-                        <h2>Bike or scoot there, with JUMP</h2>
-                        <p>Go farther and have more fun with electric bikes and scooters.
-                        </p>
-                        <a href="" role="button" class="btn-link">Get a ride</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-bike.svg" alt="">
+                        <span>Bike</span>
+                    </a>
                 </li>
-
                 <li role="tab">
-                    <a href="" role="button"><img src="" alt=""><span>Fly</span></a>
-                    <div>
-                        <h2>Ridesharing at new heights</h2>
-                        <p>Building the future of transportation with urban aerial ridesharing.
-                        </p>
-                        <a href="" role="button" class="btn-link">Learn more</a>
-                        <img src="" alt="">
-                    </div>
+                    <a href="#self">
+                        <img src="./assets/images/product-icon-airplane.svg" alt="">
+                        <span>Fly</span>
+                    </a>
                 </li>
             </ul>
+            <div class="product-outer">
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Get in the driver's seat and get paid</em>
+                        <p>Drive on the largest network of active riders.</p>
+                        <a href="#self" class="btn-link">Sign up to drive</a>
+                        <a href="#self" class="text-link">Learn more about driving and delivering</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/earn_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Request a ride now</em>
+                        <form class="request-input-box">
+                            <fieldset class="pickup">
+                                <label for="user-location" class="a11y-hidden">pickup location</label>
+                                <input type="text" id="user-location" name="pickup" placeholder="Enter pickup location" required>
+                                <a href="#self">
+                                    <svg aria-hidden="true" focusable="false" width="16px" height="16px" fill="currentColor" viewBox="0 0 24 24" tabindex="0" role="button" aria-label="Locate me" class="pe-location-fetch bi ys fr yt s7 yu">
+                                        <path d="M10.5 13.5L.5 11 21 3l-8 20.5-2.5-10z"></path>
+                                    </svg>
+                                </a>
+                            </fieldset>
+                            <fieldset class="destination">
+                                <label for="" class="a11y-hidden">Enter destination</label>
+                                <input type="text" id="" name="destination" placeholder="Enter destination" required>
+                                <a href="#self" role="button">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                                        <title>Arrow right (filled)</title><path d="M22.2 12l-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </fieldset>
+                        </form>
+                        <a href="#self" class="text-link">Learn more about driving and delivering</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/map.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Delicious eats, delivered easy</em>
+                        <p>The restaurants you love, delivered to your door.</p>
+                        <a href="#self" class="btn-link">Order now</a>
+                        <a href="#self" class="text-link">Own a restaurant? Partner with Uber Eats</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/Eats_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>A new direction for freight</em>
+                        <p>Greater transparency for shippers and carriers to do business together.</p>
+                        <a href="#self" class="btn-link">Get shipper details</a>
+                        <a href="#self" class="text-link">Sign up to be a carrier</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/Freight_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Move your teams and employees</em>
+                        <p>Uber for Business helps to simplify business travel, expensing, and customer experiences.</p>
+                        <a href="#self" class="btn-link">Learn more</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/Business_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Public transit in the app</em>
+                        <p>Plan your transit journey using real-time information and step-by-step directions right in the app.</p>
+                        <a href="#self" class="btn-link">Learn more</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/Transit_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Bike or scoot there, with JUMP</em>
+                        <p>Go farther and have more fun with electric bikes and scooters.</p>
+                        <a href="#self" class="btn-link">Get a ride</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/bike_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-panel" role="tabpanel">
+                    <div class="detail-text">
+                        <em>Ridesharing at new heights</em>
+                        <p>Building the future of transportation with urban aerial ridesharing.</p>
+                        <a href="#self" class="btn-link">Learn more</a>
+                    </div>
+                    <div class="detail-img">
+                        <img src="./assets/images/Fly_2x.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </section>
 
-
-        <div class="section cities">
-            <h2>Setting 700+ cities in motion</h2>
-            <a href="" class="more-info">View all cities</a>
-            <img src="" alt="background image">
-        </div>
-
-        <div class="section video">
-            <h2>You move the world</h2>
-            <a href="">Play the video</a>
-            <a href="" class="more-info">See the stories</a>
-            <iframe class="bg-video" src="" allowfullscreen></iframe>
-        </div>
-
-        <div class="section safety">
-            <h2>Our commitment to your safety</h2>
-            <p>With every safety feature we add and every standard in our Community Guideliens we uphold, we're
-                committed to protecting you on the road ahead. Learn more about our Community Guidelines <a
-                    href=""><strong>here</strong></a>.</p>
-            <a href="" class="more-info">See all safety features</a>
-            <img src="" alt="">
-        </div>
-
-        <div class="section more">
-            <div class="about-us">
-                <img src="" alt="">
-                <h3>About us</h3>
-                <p>Find out how we started, what drives us, and how we're igniting opportunity.</p>
-                <a href="" class="more-info">Learn more</a>
+        <section class="service">
+            <div class="service-info">
+                <h2>Setting 700+ cities in motion</h2>
+                <a href="#self" class="text-link">View all cities</a>
             </div>
-            <div class="newsroom">
-                <img src="" alt="">
-                <h3>Newsroom</h3>
-                <p>See announcements about our latest releases, initiatives, and aprtnerships.</p>
-                <a href="" class="more-info">Learn more</a>
+            <div class="service-bg">
+                <img src="./assets/images/Modalities_banner_home.jpg" alt="">
             </div>
-            <div class="citizenship">
-                <img src="" alt="">
-                <h3>Global citizenship</h3>
-                <p>Read about our commitment to making a positive impact in the cities we serve.</p>
-                <a href="" class="more-info">Learn more</a>
+        </section>
+
+        <article class="ad-video">
+            <h2 class="a11y-hidden">Uber video for AD</h2>
+            <div class="video-info-layer">
+                <p>You move the world</p>
+                <a href="#self">
+                    <svg aria-hidden="true" focusable="false" width="1em" height="1em" fill="red" viewBox="0 0 65 45">
+                        <path d="M54 0H11C4.9 0 0 4.9 0 11v23c0 6.1 4.9 11 11 11h43c6.1 0 11-4.9 11-11V11c0-6.1-4.9-11-11-11zm-8.8 22.9l-19.5 10c-.2.1-.5 0-.7-.2 0-.1-.1-.1-.1-.2v-20c0-.3.2-.5.5-.5.1 0 .2 0 .2.1l19.5 10c.2.1.3.4.2.7.1 0 0 .1-.1.1z"></path>
+                    </svg>
+                    <span>Play the video</span>
+                </a>
+                <a href="#self" class="text-link">See the stories</a>
+            </div>
+            <div class="video-box">
+                <video src="./assets/video/ad-video.mp4" muted autoplay></video>
+            </div>
+        </article>
+
+        <section class="safety">
+            <div>
+                <h2>Our commitment to your safety</h2>
+                <p>
+                    With every safety feature we add and every standard in our Community Guidelines we uphold, we’re committed to protecting you on the road ahead. Learn more about our Community Guidelines <a href="#self" class="here-link">here</a>.
+                </p>
+                <a href="#self" class="text-link">See all safety features</a>
+            </div>
+            <div class="safety-bg">
+                <img src="./assets/images/Safety_ilo.svg" alt="">
+            </div>
+        </section>
+
+        <div class="sitemap-info">
+            <div>
+                <img src="./assets/images/person-multiple-outlined.svg" alt="about-icon">
+                <dl class="description">
+                    <dt>About us</dt>
+                    <dd>Find out how we started, what drives us, and how we’re igniting opportunity.</dd>
+                </dl>
+                <a href="#self" class="text-link">Learn more</a>
+            </div>
+            <div>
+                <img src="./assets/images/document-outlined.svg" alt="newsroom-icon">
+                <dl class="description">
+                    <dt>Newsroom</dt>
+                    <dd>See announcements about our latest releases, initiatives, and partnerships.</dd>
+                </dl>
+                <a href="#self" class="text-link">Learn more</a>
+            </div>
+            <div>
+                <img src="./assets/images/home-outlined.svg" alt="citizenship-icon">
+                <dl class="description">
+                    <dt>Global citizenship</dt>
+                    <dd>Read about our commitment to making a positive impact in the cities we serve.</dd>
+                </dl>
+                <a href="#self" class="text-link">Learn more</a>
             </div>
         </div>
 
-
-        <div id="signup-pg">
-            <a href="">Sign up to drive<img src="" alt=""></a>
-            <a href="">Sign up to ride<img src="" alt=""></a>
-        </div>
+        <ul class="signup-list">
+            <li>
+                <a href="#self">
+                    Sign up to drive
+                    <span>
+                        <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="currentColor" viewBox="0 0 36 36">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#self">
+                    Sign up to ride
+                    <span>
+                        <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="currentColor" viewBox="0 0 36 36">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+        </ul>
     </main>
 
     <footer>
-        <a href="" class="footer-logo"></a>
-
-        <ul class="footer-help">
-            <li><img src="" alt="">Help Center</li>
-            <li><img src="" alt="">English</li>
-            <li><img src="" alt="">Seoul</li>
-        </ul>
-
-        <div class="footer-link">
-            <ul class="link-about-us">
-                <li><a href="">Newsroom</a></li>
-                <li><a href="">Investor relations</a></li>
-                <li><a href="">Global citizenship</a></li>
-                <li><a href="">Safety</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Careers</a></li>
+        <div class="footer-top">
+            <a href="#self" class="footer-logo"></a>
+            <ul class="footer-help">
+                <li><img src="" alt="">Help Center</li>
+                <li><img src="" alt="">English</li>
+                <li><img src="" alt="">Seoul</li>
             </ul>
-            <ul class="link-products">
-                <li><a href="">Ride</a></li>
-                <li><a href="">Drive</a></li>
-                <li><a href="">Eat</a></li>
-                <li><a href="">Business</a></li>
-                <li><a href="">Freight</a></li>
-                <li><a href="">Health</a></li>
-                <li><a href="">Uber Air</a></li>
-                <li><a href="">Advanced Technologies Group</a></li>
-            </ul>
+            <div>
+                <a href="#self" id="footer-about">About us</a>
+                <ul class="footer-about-list" aria-labelledby="footer-about">
+                    <li><a href="#self">Newsroom</a></li>
+                    <li><a href="#self">Investor relations</a></li>
+                    <li><a href="#self">Global citizenship</a></li>
+                    <li><a href="#self">Safety</a></li>
+                    <li><a href="#self">Blog</a></li>
+                    <li><a href="#self">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="#self" id="footer-product">Our products</a>
+                <ul class="footer-product-list" aria-labelledby="footer-product">
+                    <li><a href="#self">Ride</a></li>
+                    <li><a href="#self">Drive</a></li>
+                    <li><a href="#self">Eat</a></li>
+                    <li><a href="#self">Business</a></li>
+                    <li><a href="#self">Freight</a></li>
+                    <li><a href="#self">Health</a></li>
+                    <li><a href="#self">Uber Air</a></li>
+                    <li><a href="#self">Advanced Technologies Group</a></li>
+                </ul>
+            </div>
+            <div class="download-apps">
+                <a href="#self"><img src="" alt=""></a>
+                <a href="#self"><img src="" alt=""></a>
+            </div>
+            <div class="footer-sns">
+                <ul>
+                    <li><a href="#self"><img src="" alt=""></a></li>
+                    <li><a href="#self"><img src="" alt=""></a></li>
+                    <li><a href="#self"><img src="" alt=""></a></li>
+                    <li><a href="#self"><img src="" alt=""></a></li>
+                    <li><a href="#self"><img src="" alt=""></a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="footer-apps">
-            <div class="app-store"><a href=""><img src="" alt=""></a></div>
-            <div class="google-play"><a href=""><img src="" alt=""></a></div>
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <ul>
+                    <li><a href="#self">Privacy</a></li>
+                    <li><a href="#self">Accessibility</a></li>
+                    <li><a href="#self">Terms</a></li>
+                </ul>
+            </div>
+            <small class="copyright">&copy;2019 Uber Technologies Inc.</small>
         </div>
-
-        <div class="footer-sns">
-            <ul>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""><img src="" alt=""></a></li>
-            </ul>
-        </div>
-
-        <div class="footer-legal">
-            <ul>
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Accessibility</a></li>
-                <li><a href="">Terms</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-company">2019 Uber Technologies Inc.</div>
     </footer>
 </body>
 </html>
