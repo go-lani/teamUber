@@ -26,6 +26,11 @@
         right: 0;
         height: 1px;
         background: #aaa;
+        transition: background .4s;
+    }
+
+    .text-link:hover::after {
+        background: #000;
     }
 
     /* main */
