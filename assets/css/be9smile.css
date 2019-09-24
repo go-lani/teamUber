@@ -27,6 +27,11 @@
     height: 16px;
 }
 
+.logo svg:hover {
+    transition-duration: 0.5s;
+    fill: #276efe;
+}
+
 .util-box {
     display: flex;
     /* justify-content: space-between; */
@@ -67,11 +72,12 @@
 }
 
 .signup-btn:hover {
+    transition-duration: 0.3s;
     background: #e2e2e2;
 }
 
 .nav-btn {
-    background-color: transparent;
+    background: none;
     display: block;
     border: none;
     padding: 0 6px;
@@ -87,7 +93,7 @@
 
 .nav-btn:hover svg {
     transition-duration: 0.3s;
-    fill: #276efe
+    fill: #276efe;
 }
 
 
