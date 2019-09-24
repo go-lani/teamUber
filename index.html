@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 	<script src="./assets/js/jquery-3.2.1.min.js"></script>
 	<script src="./assets/js/header.js" defer></script>
+	<script src="./assets/js/main.js" defer></script>
 </head>
 <body>
     <div id="wrap">
@@ -31,7 +32,7 @@
                     </button>
                 </div>
             </div>
-            <nav class="navigation" style="display: none;">
+            <nav class="navigation">
                 <h2 class="a11y-hidden">Global menu</h2>
                 <section class="menu-login-area" aria-hidden="true">
                     <h3 class="a11y-hidden">Login area</h3>
@@ -253,49 +254,49 @@
                 <h2 class="a11y-hidden">products</h2>
                 <div class="product-list">
                     <ul role="tablist">
-                        <li class="product-list-tab on" role="tab" aria-controls="section1" tabindex="0">
+                        <li class="product-list-tab on" role="tab" aria-controls="prod-earn" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-graph.svg" alt="">
                                 <span>Earn</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section2" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-ride" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-car.svg" alt="">
                                 <span>Ride</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section3" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-eat" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-eats.svg" alt="">
                                 <span>Eat</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section4" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-freight" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-truck.svg" alt="">
                                 <span>Freight</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section5" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-business" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-business.svg" alt="">
                                 <span>Business</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section6" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-transit" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-subway.svg" alt="">
                                 <span>Transit</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section7" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-bike" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-bike.svg" alt="">
                                 <span>Bike</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab" aria-controls="section8" tabindex="0">
+                        <li class="product-list-tab" role="tab" aria-controls="prod-fly" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-airplane.svg" alt="">
                                 <span>Fly</span>
@@ -304,7 +305,7 @@
                     </ul>
                 </div>
                 <div class="product-outer">
-                    <div class="product-panel earn" role="tabpanel" id="section1" aria-labelledby="tab1">
+                    <div class="product-panel on" id="prod-earn" role="tabpanel" aria-labelledby="tab1">
                         <div class="detail-text">
                             <em>Get in the driver's seat and get paid</em>
                             <p>Drive on the largest network of active riders.</p>
@@ -315,7 +316,7 @@
                             <img src="./assets/images/earn_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel ride" role="tabpanel" id="section2" aria-labelledby="tab2">
+                    <div class="product-panel" id="prod-ride" role="tabpanel" aria-labelledby="tab2">
                         <div class="detail-text">
                             <em>Request a ride now</em>
                             <form class="request-input-box">
@@ -344,7 +345,7 @@
                             <img src="./assets/images/map.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel eat" role="tabpanel" id="section3" aria-labelledby="tab3">
+                    <div class="product-panel" id="prod-eat" role="tabpanel" aria-labelledby="tab3">
                         <div class="detail-text">
                             <em>Delicious eats, delivered easy</em>
                             <p>The restaurants you love, delivered to your door.</p>
@@ -355,7 +356,7 @@
                             <img src="./assets/images/Eats_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel freight" role="tabpanel" id="section4" aria-labelledby="tab5">
+                    <div class="product-panel" id="prod-freight" role="tabpanel" aria-labelledby="tab5">
                         <div class="detail-text">
                             <em>A new direction for freight</em>
                             <p>Greater transparency for shippers and carriers to do business together.</p>
@@ -366,7 +367,7 @@
                             <img src="./assets/images/Freight_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel business" role="tabpanel" id="section5" aria-labelledby="tab5">
+                    <div class="product-panel" id="prod-business" role="tabpanel" aria-labelledby="tab5">
                         <div class="detail-text">
                             <em>Move your teams and employees</em>
                             <p>Uber for Business helps to simplify business travel, expensing, and customer experiences.</p>
@@ -376,7 +377,7 @@
                             <img src="./assets/images/Business_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel transit" role="tabpanel" id="section6" aria-labelledby="tab6">
+                    <div class="product-panel" id="prod-transit" role="tabpanel" aria-labelledby="tab6">
                         <div class="detail-text">
                             <em>Public transit in the app</em>
                             <p>Plan your transit journey using real-time information and step-by-step directions right in the app.</p>
@@ -386,7 +387,7 @@
                             <img src="./assets/images/Transit_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel bike" role="tabpanel" id="section7" aria-labelledby="tab7">
+                    <div class="product-panel" id="prod-bike" role="tabpanel" aria-labelledby="tab7">
                         <div class="detail-text">
                             <em>Bike or scoot there, with JUMP</em>
                             <p>Go farther and have more fun with electric bikes and scooters.</p>
@@ -396,7 +397,7 @@
                             <img src="./assets/images/bikes_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel fly" role="tabpanel" id="section8" aria-labelledby="tab8">
+                    <div class="product-panel" id="prod-fly" role="tabpanel" aria-labelledby="tab8">
                         <div class="detail-text">
                             <em>Ridesharing at new heights</em>
                             <p>Building the future of transportation with urban aerial ridesharing.</p>
