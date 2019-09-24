@@ -8,6 +8,12 @@
         max-width: 100%;
     }
 
+    /* main */
+    #main {
+        /* background: yellow; */
+        padding: 0 24px;
+    }
+
     .text-link {
         display: inline-block;
         font-size: 1.6rem;
@@ -33,29 +39,78 @@
         background: #000;
     }
 
-    /* main */
-    #main {
-        /* background: yellow; */
-        padding: 0 24px;
+    /* products 공통부분 */
+    .product-panel {
+        margin-top: 40px;
     }
 
-    /* products 섹션 */
-    /* ride 파트 */
     .detail-text {
-        margin-top: 40px;
+        position: relative;
+        min-height: 300px;
     }
 
     .detail-text em {
         font-family: UberMove;
         font-size: 3.6rem;
         font-weight: 500;
+    }
 
+    .detail-text p {
+        margin-top: 20px;
+        font-size: 1.6rem;
+    }
+
+    .detail-text .btn-link {
+        background: #000;;
+        border: 1px solid #000;
+        color: #fff;
+        padding: 14px 25px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 48px;
+    }
+
+    .detail-text .text-link {
+        margin: 20px 130px 0 0;
+    }
+    
+    .detail-img {
+        margin: 0 -24px;
+    }
+
+    /* ride 파트 */
+    /* form 태그 */
+    .request-input-box {
+        margin-top: 20px;
+    }
+
+    .request-input-box::after{
+        content: "";
+        display: block;
+        border-left: 1px solid #000;
+        z-index: 1;
+        height: 45px;
+        position: absolute;
+        top: 90px;
+        left: 18px;
+    }
+
+    /* pickup, destination 공통 */
+    fieldset {
+        background: #f6f6f6;
+        margin-top: 5px;
+        height: 50px;
+        position: relative;
+        padding: 10px 30px;
+        border: none;
     }
 
     input::placeholder {
         font-size: 1.6rem;
     }
 
+    /* fieldset - pickup */
     .pickup::before {
         content: '';
         border: 1px solid #000;
@@ -66,39 +121,6 @@
         top: 50%;
         left: 15px;
         transform: translateY(-50%);
-    }
-
-    .pickup::after {
-        content: "";
-        display: block;
-        border-left: 1px solid #000;
-        z-index: 1;
-        height: 45px;
-        position: absolute;
-        top: 30px;
-        left: 18px;
-    }
-
-    .destination::before {
-        content: '';
-        display: block;
-        border: 1px solid #000;
-        width: 5px;
-        height: 5px;
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        transform: translateY(-50%);
-    }
-
-    /* pickup location */
-    .pickup {
-        background: #f6f6f6;
-        height: 50px;
-        position: relative;
-        padding: 10px 30px;
-        margin-top: 20px;
-        border: none;
     }
 
     .pickup input {
@@ -116,15 +138,17 @@
         transform: translateY(-50%);
     }
 
-    /* destination */
-    .destination {
-        background: #f6f6f6;
-        height: 50px;
-        position: relative;
-        padding: 10px 30px;
-        margin: 5px 0 30px;
-        border: none;
-
+    /* fieldset - destination */
+    .destination::before {
+        content: '';
+        display: block;
+        border: 1px solid #000;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
     }
 
     .destination input {
@@ -143,14 +167,13 @@
         padding: 18px;
     }
 
-    .detail-img {
-        margin-top: 80px;
+    .ride .text-link {
+        margin-top: 40px !important;
     }
 
     /* service 섹션 */
     .service {
         padding: 30px 0 60px;
-        /* background: skyblue; */
     }
 
     .service-info {
@@ -172,7 +195,6 @@
     .ad-video {
         position: relative;
         margin-bottom: 94px;
-        background: yellowgreen;
     }
 
     .video-info-layer {
@@ -231,10 +253,6 @@
     }
 
     /* safety 섹션 */
-    .safety {
-        /* background: silver; */
-    }
-
     .safety-details {
         margin-bottom: 30px;
     }
@@ -266,7 +284,6 @@
 
     /* sitemap 정보섹션 */
     .sitemap-info {
-        /* background: skyblue; */
         padding: 30px 0;
     }
 
@@ -300,7 +317,6 @@
 
     /* signup list 섹션 */
     .signup-list {
-        /* background: aqua; */
         padding: 30px 0;
     }
 
@@ -360,7 +376,6 @@
         height: 44px;
         color: #000;
     }
-
 }
 
 /* 태블릿 해상도일때 */
