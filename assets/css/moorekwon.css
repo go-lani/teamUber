@@ -35,7 +35,7 @@
 
     /* main */
     #main {
-        background: yellow;
+        /* background: yellow; */
         padding: 0 24px;
     }
 
@@ -44,7 +44,7 @@
     /* service 섹션 */
     .service {
         padding: 30px 0 60px;
-        background: skyblue;
+        /* background: skyblue; */
     }
 
     .service-info {
@@ -125,7 +125,7 @@
 
     /* safety 섹션 */
     .safety {
-        background: silver;
+        /* background: silver; */
     }
 
     .safety-details {
@@ -147,9 +147,10 @@
         margin-bottom: 12px;
     }
 
-    .safety-details p a {
-        font-weight: blod;
+    .safety-details .here-link {
+        font-weight: 500;
         text-decoration: underline;
+        text-underline-position: under;
     }
 
     .safety-bg {
@@ -158,7 +159,7 @@
 
     /* sitemap 정보섹션 */
     .sitemap-info {
-        background: skyblue;
+        /* background: skyblue; */
         padding: 30px 0;
     }
 
@@ -192,32 +193,50 @@
 
     /* signup list 섹션 */
     .signup-list {
-        background: aqua;
+        /* background: aqua; */
         padding: 30px 0;
     }
 
     .signup-list li {
         min-height: 36px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid #000;
         margin-bottom: 50px;
     }
 
-    .signup-list li::after {
+    .signup-list li a {
+        display: block;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #000;
+    }
+
+    .signup-list li a::after {
         display: block;
         content: "";
         clear: both;
     }
 
     .signup-list p {
-        display: inline-block;
         float: left;
         width: 70%;
         font-size: 2.8rem;
+        line-height: 44px;
         font-weight: 500;
-        overflow: wrap;
         word-break: keep-all;
         color: #000;
+    }
+
+    .signup-list a:hover {
+        border-bottom-color: #276efe;
+        transition: all .4s;
+    }
+
+    .signup-list a:hover p {
+        color: #276efe;
+        transition: all .4s;
+    }
+
+    .signup-list a:hover svg {
+        fill: #276efe;
+        transition: all .4s;
     }
 
     .signup-list span {
@@ -226,7 +245,7 @@
         line-height: 36px;
     }
 
-    .signup-list span svg {
+    .signup-list svg {
         float: right;
         font-size: 4.4rem;
         line-height: 24px;
@@ -234,6 +253,7 @@
         height: 44px;
         color: #000;
     }
+
 }
 
 /* 태블릿 해상도일때 */
