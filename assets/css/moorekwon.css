@@ -41,7 +41,12 @@
 
     /* products 공통부분 */
     .product-panel {
+        display: none;
         margin-top: 40px;
+    }
+
+    .product-panel.on {
+        display: block !important;
     }
 
     .detail-text {
@@ -74,7 +79,7 @@
     .detail-text .text-link {
         margin: 20px 130px 0 0;
     }
-    
+
     .detail-img {
         margin: 0 -24px;
     }
