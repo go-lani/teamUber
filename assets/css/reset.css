@@ -20,6 +20,12 @@ ul,ol,li	{list-style: none;}
 
 sup,sub				{line-height: 1;}
 
+a:focus,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {outline: 3px solid #276efe; outline-offset: -3px;}
+
 .fl_l {float: left !important;}
 .fl_c {display: inline-block; float: none !important;}
 .fl_r {float: right !important;}

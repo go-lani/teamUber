@@ -2,6 +2,59 @@
 
 
 /* all device */
+
+/*******************
+*메인컨텐츠 탭 영역
+******************/
+.product-list {
+    overflow: hidden;
+    background: #fafaf9;
+}
+.product-list ul {
+    font-size: 0;
+}
+
+.product-list-tab {
+    display: inline-block;
+    width: 105px;
+}
+
+.product-list-tab a {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.product-list-tab a::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #276ef1;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all .4s;
+}
+
+.product-list-tab.on a::after, .product-list-tab a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.product-list-tab span {
+    display: block;
+    transition: all .4s;
+}
+
+.product-list-tab.on span, .product-list-tab a:hover span {
+    color: #276ef2;
+}
+
+/*******************
+*footer 영역
+******************/
 #footer {
     position: relative;
     background: #000;
@@ -173,10 +226,53 @@
 
 /* 모바일 해상도일때 */
 @media all and (max-width: 768px) {
+
+
+    /*******************
+    *메인컨텐츠 탭 영역
+    ******************/
+    .product-list {
+        margin: 0 -24px;
+        height: 122px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .product-list ul {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        font-size: 0;
+    }
+
+    .product-list-tab a {
+        padding: 28px 14px 33px;
+    }
+
+    .product-list-tab a::after {
+        bottom: 1px;
+        height: 4px;
+    }
+
+    .product-list-tab img {
+        width: 18px;
+        height: 18px;
+    }
+    .product-list-tab span {
+        margin: 25px 0 0;
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+
+    /*******************
+    *footer 영역
+    ******************/
     #footer {
         padding: 60px 25px 34px;
     }
 
+    /*******************
+    *footer top 영역
+    ******************/
     .footer-logo {
         width: 77px;
         height: 26px;

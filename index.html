@@ -6,8 +6,135 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uber Project</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+	<script src="./assets/js/jquery-3.2.1.min.js"></script>
+	<script src="./assets/js/header.js" defer></script>
 </head>
 <body>
+    <style>
+        #header {
+            position: relative;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            min-height: calc(100vh - 50px);
+            background: pink;
+
+        }
+
+        .navigation section[aria-hidden="true"] {
+            display: none !important;
+        }
+
+        .menu-login-area, .menu-signup-area {
+            padding: 40px 24px;
+            background: skyblue;
+        }
+
+        .type-list li:nth-child(n + 2) {
+            margin: 70px 0 0;
+        }
+
+        .type-list .icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .type-list a {
+            display: block;
+            position: relative;
+            margin: 30px 0 0;
+            padding: 0 20% 30px 0;
+            font-family: UberMove;
+            font-size: 2.8rem;
+            line-height: 36px;
+            border-bottom: 1px solid #000;
+        }
+
+        .type-list a span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24px;
+            height: 24px;
+        }
+
+        .type-list a svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .type-list .text {
+            margin: 20px 0 0;
+            font-size: 1.6rem;
+            line-height: 24px;
+        }
+
+        .menu-gnb-area {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu-gnb-area > * {
+            flex-basis: 100%;
+        }
+
+        .menu-gnb-area .language-btn {
+            order: 1;
+        }
+
+        .depth2 {
+            padding: 0 24px;
+            background: #f6f6f6;
+        }
+
+        .depth2 li {
+            float: left;
+            position: relative;
+        }
+
+        .depth2 li:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: #276efe;
+            transform: scaleX(0);
+            opacity: 0;
+            transition: all .3s;
+        }
+
+        .depth2 li.on:after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .depth2 li:nth-child(n + 2) {
+            margin: 0 0 0 24px;
+        }
+
+        .depth2 button {
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            border: none;
+            background: none;
+            font-family: UberMove;
+            font-size: 18px;
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        .depth4-list {
+            display: none;
+        }
+    </style>
     <div id="wrap">
         <header id="header">
             <div>
@@ -32,70 +159,235 @@
                     </button>
                 </div>
             </div>
+            <nav class="navigation">
+                <h2 class="a11y-hidden">Global menu</h2>
+                <section class="menu-login-area" aria-hidden="true">
+                    <h3 class="a11y-hidden">Login area</h3>
+                    <ul class="type-list">
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm0 3c3.9 0 7.1 2.8 7.9 6.5h-3.1c-.6-2-2.5-3.5-4.7-3.5S8 8.5 7.4 10.5H4.3C4.9 6.8 8.1 4 12 4zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-7.9-.5h3.1c.5 1.5 1.7 2.8 3.2 3.2v3.1c-3.1-.6-5.6-3.1-6.3-6.3zm9.4 6.4v-3.1c1.5-.5 2.8-1.7 3.2-3.2h3.1c-.6 3.1-3.1 5.6-6.3 6.3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Driver login</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <p class="text">Find everything you need to track your success on the road.</p>
+                        </li>
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Rider login</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <p class="text">Manage your payment options, review trip history, and more.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-signup-area" aria-hidden="true">
+                    <h3 class="a11y-hidden">Sign up area</h3>
+                    <ul class="type-list">
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm0 3c3.9 0 7.1 2.8 7.9 6.5h-3.1c-.6-2-2.5-3.5-4.7-3.5S8 8.5 7.4 10.5H4.3C4.9 6.8 8.1 4 12 4zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-7.9-.5h3.1c.5 1.5 1.7 2.8 3.2 3.2v3.1c-3.1-.6-5.6-3.1-6.3-6.3zm9.4 6.4v-3.1c1.5-.5 2.8-1.7 3.2-3.2h3.1c-.6 3.1-3.1 5.6-6.3 6.3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Sign up to drive</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Sign up to ride</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-gnb-area" aria-hidden="false">
+                    <h3 class="a11y-hidden">site navigation area</h3>
+                    <a href="#self" class="language-btn">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <title>EN</title>
+                                <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        EN
+                    </a>
+                    <ul class="depth2 clear-fix" role="tablist">
+                        <li class="on" role="tab">
+                            <button type="button">Our products</button>
+                        </li>
+                        <li role="tab">
+                            <button type="button">Our company</button>
+                        </li>
+                    </ul>
+                    <div class="depth3">
+                        <div class="gnb-list-box" role="tabpanel">
+                            <h4 class="a11y-hidden">Our products menu</h4>
+                            <ul class="depth3-list">
+                                <li>
+                                    <a href="#self">Ride</a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">How it works</a></li>
+                                        <li><a href="#self">Price estimator</a></li>
+                                        <li><a href="#self">Safety</a></li>
+                                        <li><a href="#self">Find a city</a></li>
+                                        <li><a href="#self">Find an airport</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self">Drive</a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">How to sign up</a></li>
+                                        <li><a href="#self">Earnings</a></li>
+                                        <li><a href="#self">Driver app</a></li>
+                                        <li><a href="#self">Driver safety</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self">Uber Eats</a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Find a city</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self">Uber Eats</a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Find a city</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self">Uber for Business</a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Resources</a></li>
+                                        <li><a href="#self">Uber for Business Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self">Freight</a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="cs-list">
+                                <li><a href="#self">Safety</a></li>
+                                <li><a href="#self">Help</a></li>
+                            </ul>
+                        </div>
+                        <div class="gnb-list-box" role="tabpanel" style="display: none">
+                            <h4 class="a11y-hidden">Our company menu</h4>
+                        </div>
+                    </div>
+                </section>
+            </nav>
         </header>
         <style>
             .product-panel {display: none;}
 
 
             /* 시작 */
-
-
         </style>
-        <main id="main" role="main">
+        <main id="main" role="main" style="display: none;">
             <section class="products">
                 <h2 class="a11y-hidden">products</h2>
-                <ul class="product-list" role="tablist" style="display: none;">
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-graph.svg" alt="">
-                            <span>Earn</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-car.svg" alt="">
-                            <span>Ride</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-eats.svg" alt="">
-                            <span>Eat</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-truck.svg" alt="">
-                            <span>Freight</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-business.svg" alt="">
-                            <span>Business</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-subway.svg" alt="">
-                            <span>Transit</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-bike.svg" alt="">
-                            <span>Bike</span>
-                        </a>
-                    </li>
-                    <li role="tab">
-                        <a href="#self">
-                            <img src="./assets/images/product-icon-airplane.svg" alt="">
-                            <span>Fly</span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="product-list">
+                    <ul role="tablist">
+                        <li class="product-list-tab on" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-graph.svg" alt="">
+                                <span>Earn</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-car.svg" alt="">
+                                <span>Ride</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-eats.svg" alt="">
+                                <span>Eat</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-truck.svg" alt="">
+                                <span>Freight</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-business.svg" alt="">
+                                <span>Business</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-subway.svg" alt="">
+                                <span>Transit</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-bike.svg" alt="">
+                                <span>Bike</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab" role="tab">
+                            <a href="#self">
+                                <img src="./assets/images/product-icon-airplane.svg" alt="">
+                                <span>Fly</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="product-outer">
-                    <div class="product-panel" role="tabpanel" style="display: block;">
+                    <div class="product-panel" role="tabpanel">
                         <div class="detail-text">
                             <em>Get in the driver's seat and get paid</em>
                             <p>Drive on the largest network of active riders.</p>
@@ -184,7 +476,7 @@
                             <a href="#self" class="btn-link">Get a ride</a>
                         </div>
                         <div class="detail-img">
-                            <img src="./assets/images/bike_2x.jpg" alt="">
+                            <img src="./assets/images/ride_2x.jpg" alt="">
                         </div>
                     </div>
                     <div class="product-panel" role="tabpanel">
@@ -265,9 +557,7 @@
             <ul class="signup-list">
                 <li>
                     <a href="#self">
-                        <p>
-                            Sign up to drive
-                        </p>
+                        <p>Sign up to drive</p>
                         <span>
                             <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
@@ -277,9 +567,7 @@
                 </li>
                 <li>
                     <a href="#self">
-                        <p>
-                            Sign up to ride
-                        </p>
+                        <p>Sign up to ride</p>
                         <span>
                             <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
@@ -289,7 +577,7 @@
                 </li>
             </ul>
         </main>
-        <footer id="footer">
+        <footer id="footer" style="display: none;">
             <div class="footer-top">
                 <a href="#self" class="footer-logo">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 52" fill="#fff">
@@ -387,7 +675,7 @@
                         </li>
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" width="1em" height="1em" fill="white" viewBox="0 0 64 64">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
                                     <title>linkedIn Shortcut button</title>
                                     <path d="M48.172 7.998H15.974C11.611 7.998 8 11.61 8 15.973v31.9c0 4.514 3.61 8.125 7.974 8.125h32.047c4.364 0 7.974-3.61 7.974-7.974V15.973c.15-4.364-3.46-7.975-7.823-7.975zm-25.54 40.017h-7.166v-21.8h7.167v21.8zM19.05 23.229c-2.538 0-4.031-1.643-4.031-3.733s1.642-3.733 4.031-3.733c2.539 0 4.032 1.642 4.032 3.733.15 2.09-1.493 3.733-4.032 3.733zm29.714 24.786h-7.167V36.368c0-2.986-1.045-4.927-3.733-4.927-1.941 0-3.135 1.344-3.733 2.688a5.569 5.569 0 0 0-.298 1.791v12.095h-7.168s.15-19.71 0-21.8h7.168v3.136c.896-1.494 2.687-3.584 6.57-3.584 4.778 0 8.361 3.136 8.361 9.855v12.393z"></path>
                                 </svg>
@@ -395,7 +683,7 @@
                         </li>
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" width="1em" height="1em" fill="white" viewBox="0 0 64 64">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
                                     <title>Instargram Shortcut button</title>
                                     <path d="M58.022 21.275c-.178-2.671-.534-4.63-1.247-6.233-.712-1.78-1.602-3.205-3.027-4.63-1.425-1.425-2.85-2.315-4.63-3.027-1.603-.713-3.562-1.069-6.233-1.247-2.85-.178-3.74-.178-10.685-.178s-7.836 0-10.685.178c-2.671.178-4.63.534-6.233 1.247-1.78.712-3.205 1.602-4.63 3.027-1.425 1.425-2.315 2.85-3.027 4.63-.713 1.603-1.069 3.562-1.247 6.233C6.2 23.946 6.2 24.837 6.2 31.96s0 7.836.178 10.685c.178 2.671.534 4.63 1.247 6.233.712 1.78 1.602 3.205 3.027 4.63 1.425 1.425 2.85 2.315 4.63 3.027 1.603.713 3.562 1.069 6.233 1.247 2.671.178 3.562.178 10.685.178s7.836 0 10.685-.178c2.671-.178 4.63-.534 6.233-1.247 1.78-.712 3.205-1.602 4.63-3.027 1.425-1.425 2.315-2.85 3.027-4.63.713-1.603 1.069-3.562 1.247-6.233.178-2.671.178-3.562.178-10.685s0-7.836-.178-10.685zm-4.63 21.192c-.178 2.493-.534 3.918-.89 4.808-.535 1.247-1.069 2.137-1.96 3.028-.89.89-1.78 1.424-3.027 1.959-.89.356-2.315.712-4.808.89-2.671.178-3.562.178-10.507.178s-7.658 0-10.507-.178c-2.493-.178-3.918-.534-4.808-.89-1.247-.535-2.137-1.069-3.028-1.96-.89-.89-1.424-1.78-1.959-3.027-.356-.89-.712-2.315-.89-4.808-.178-2.671-.178-3.562-.178-10.507s0-7.658.178-10.507c.178-2.493.534-3.918.89-4.808.535-1.247 1.069-2.137 1.96-3.027.89-.89 1.78-1.425 3.027-1.96.89-.356 2.315-.712 4.808-.89 2.85-.178 3.562-.178 10.507-.178s7.657 0 10.507.178c2.493.178 3.918.534 4.808.89 1.247.535 2.137 1.07 3.028 1.96.89.89 1.424 1.78 1.958 3.027.357.89.713 2.315.89 4.808.179 2.671.179 3.562.179 10.507s0 7.658-.178 10.507z"></path><path d="M32.2 18.604c-7.301 0-13.178 5.877-13.178 13.178S24.899 44.96 32.2 44.96c7.301 0 13.178-5.877 13.178-13.178S39.501 18.604 32.2 18.604zm0 21.726c-4.808 0-8.548-3.918-8.548-8.548s3.918-8.548 8.548-8.548 8.548 3.918 8.548 8.548-3.74 8.548-8.548 8.548zM46.09 15.042c-1.603 0-3.027 1.425-3.027 3.027s1.246 3.028 3.027 3.028c1.603 0 3.027-1.247 3.027-3.028s-1.424-3.205-3.027-3.027z"></path>
                                 </svg>
