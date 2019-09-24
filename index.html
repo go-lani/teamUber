@@ -10,131 +10,6 @@
 	<script src="./assets/js/header.js" defer></script>
 </head>
 <body>
-    <style>
-        #header {
-            position: relative;
-        }
-
-        .navigation {
-            position: absolute;
-            top: 50px;
-            left: 0;
-            right: 0;
-            min-height: calc(100vh - 50px);
-            background: pink;
-
-        }
-
-        .navigation section[aria-hidden="true"] {
-            display: none !important;
-        }
-
-        .menu-login-area, .menu-signup-area {
-            padding: 40px 24px;
-            background: skyblue;
-        }
-
-        .type-list li:nth-child(n + 2) {
-            margin: 70px 0 0;
-        }
-
-        .type-list .icon {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-        }
-
-        .type-list a {
-            display: block;
-            position: relative;
-            margin: 30px 0 0;
-            padding: 0 20% 30px 0;
-            font-family: UberMove;
-            font-size: 2.8rem;
-            line-height: 36px;
-            border-bottom: 1px solid #000;
-        }
-
-        .type-list a span {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 24px;
-            height: 24px;
-        }
-
-        .type-list a svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .type-list .text {
-            margin: 20px 0 0;
-            font-size: 1.6rem;
-            line-height: 24px;
-        }
-
-        .menu-gnb-area {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .menu-gnb-area > * {
-            flex-basis: 100%;
-        }
-
-        .menu-gnb-area .language-btn {
-            order: 1;
-        }
-
-        .depth2 {
-            padding: 0 24px;
-            background: #f6f6f6;
-        }
-
-        .depth2 li {
-            float: left;
-            position: relative;
-        }
-
-        .depth2 li:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            background: #276efe;
-            transform: scaleX(0);
-            opacity: 0;
-            transition: all .3s;
-        }
-
-        .depth2 li.on:after {
-            opacity: 1;
-            transform: scaleX(1);
-        }
-
-        .depth2 li:nth-child(n + 2) {
-            margin: 0 0 0 24px;
-        }
-
-        .depth2 button {
-            -webkit-appearance: none;
-            appearance: none;
-            border-radius: 0;
-            border: none;
-            background: none;
-            font-family: UberMove;
-            font-size: 18px;
-            line-height: 60px;
-            cursor: pointer;
-        }
-
-        .depth4-list {
-            display: none;
-        }
-    </style>
     <div id="wrap">
         <header id="header">
             <div>
@@ -151,11 +26,8 @@
                         <li><a href="#self" class="login-btn">Log in</a></li>
                         <li><a href="#self" class="signup-btn">Sign up</a></li>
                     </ul>
-                    <button type="button" class="nav-btn">
-                        <svg role="img" width="1em" height="1em" viewBox="0 0 24 24" fill="#fff">
-                            <title>내비게이션</title>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 3H1v3h22V3zm0 7H1v3h22v-3zM1 17h22v3H1v-3z"></path>
-                        </svg>
+                    <button type="button" class="nav-btn" aria-label="navigation button">
+                        <span>gnb button</span>
                     </button>
                 </div>
             </div>
@@ -235,17 +107,19 @@
                     </ul>
                 </section>
 
-                <section class="menu-gnb-area" aria-hidden="false">
+                <section class="menu-gnb-area" aria-hidden="true">
                     <h3 class="a11y-hidden">site navigation area</h3>
-                    <a href="#self" class="language-btn">
-                        <span>
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <title>EN</title>
-                                <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z" fill="currentColor"></path>
-                            </svg>
-                        </span>
-                        EN
-                    </a>
+                    <div class="language-btn-box">
+                        <a href="#self" class="language-btn">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <title>EN</title>
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z" fill="currentColor"></path>
+                                </svg>
+                            </span>
+                            EN
+                        </a>
+                    </div>
                     <ul class="depth2 clear-fix" role="tablist">
                         <li class="on" role="tab">
                             <button type="button">Our products</button>
@@ -255,11 +129,18 @@
                         </li>
                     </ul>
                     <div class="depth3">
-                        <div class="gnb-list-box" role="tabpanel">
+                        <div class="gnb-list-box" role="tabpanel" aria-hidden="false">
                             <h4 class="a11y-hidden">Our products menu</h4>
                             <ul class="depth3-list">
                                 <li>
-                                    <a href="#self">Ride</a>
+                                    <a href="#self">
+                                        Ride
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
                                     <ul class="depth4-list">
                                         <li><a href="#self">Overview</a></li>
                                         <li><a href="#self">How it works</a></li>
@@ -271,7 +152,14 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">Drive</a>
+                                    <a href="#self">
+                                        Drive
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
                                     <ul class="depth4-list">
                                         <li><a href="#self">Overview</a></li>
                                         <li><a href="#self">How to sign up</a></li>
@@ -282,7 +170,14 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">Uber Eats</a>
+                                    <a href="#self">
+                                        Uber Eats
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
                                     <ul class="depth4-list">
                                         <li><a href="#self">Overview</a></li>
                                         <li><a href="#self">Find a city</a></li>
@@ -290,15 +185,14 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">Uber Eats</a>
-                                    <ul class="depth4-list">
-                                        <li><a href="#self">Overview</a></li>
-                                        <li><a href="#self">Find a city</a></li>
-                                        <li><a href="#self">Blog</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#self">Uber for Business</a>
+                                    <a href="#self">
+                                        Uber for Business
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
                                     <ul class="depth4-list">
                                         <li><a href="#self">Overview</a></li>
                                         <li><a href="#self">Resources</a></li>
@@ -306,21 +200,50 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">Freight</a>
+                                    <a href="#self">
+                                        Freight
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
                                     <ul class="depth4-list">
                                         <li><a href="#self">Overview</a></li>
                                         <li><a href="#self">Blog</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                            <ul class="cs-list">
-                                <li><a href="#self">Safety</a></li>
-                                <li><a href="#self">Help</a></li>
+                        </div>
+                        <div class="gnb-list-box" role="tabpanel" aria-hidden="true">
+                            <h4 class="a11y-hidden">Our company menu</h4>
+                            <ul class="depth3-list">
+                                <li>
+                                    <a href="#self">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#self">How Uber works</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Global citizenship</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Newsroom</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Investor relations</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Careers</a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="gnb-list-box" role="tabpanel" style="display: none">
-                            <h4 class="a11y-hidden">Our company menu</h4>
-                        </div>
+                    </div>
+                    <div class="cs-cite-box">
+                        <ul class="cs-list">
+                            <li><a href="#self">Safety</a></li>
+                            <li><a href="#self">Help</a></li>
+                        </ul>
                     </div>
                 </section>
             </nav>
@@ -331,7 +254,7 @@
 
             /* 시작 */
         </style>
-        <main id="main" role="main" style="display: none;">
+        <main id="main" role="main>
             <section class="products">
                 <h2 class="a11y-hidden">products</h2>
                 <div class="product-list">
@@ -577,7 +500,7 @@
                 </li>
             </ul>
         </main>
-        <footer id="footer" style="display: none;">
+        <footer id="footer">
             <div class="footer-top">
                 <a href="#self" class="footer-logo">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 52" fill="#fff">

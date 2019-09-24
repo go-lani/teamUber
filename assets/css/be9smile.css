@@ -34,7 +34,7 @@
 
 .util-box {
     display: flex;
-    /* justify-content: space-between; */
+    align-items: center;
 }
 
 .util-list {
@@ -77,18 +77,73 @@
 }
 
 .nav-btn {
-    background: none;
     display: block;
+    overflow: hidden;
+    position: relative;
+    background: none;
     border: none;
     padding: 0 6px;
     margin-left: 6px;
     cursor: pointer;
+    width: 28px;
+    height: 28px;
+    transition: all .4s;
 }
 
-
-.nav-btn svg {
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    right: 6px;
     width: 16px;
-    height: 16px;
+    height: 2px;
+    background: #fff;
+    transition: all .4s;
+}
+
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 6px;
+    right: 6px;
+    width: 16px;
+    height: 2px;
+    background: #fff;
+    transition: all .4s;
+}
+
+.nav-btn span {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    right: 6px;
+    width: 16px;
+    height: 2px;
+    margin: -1px 0 0;
+    background: #ffffff;
+    text-indent: -28px;
+    transition: all .4s;
+}
+
+.nav-btn.close {
+    transform: rotate(360deg);
+}
+
+.nav-btn.close::before {
+    top: 13px;
+    transform: rotate(45deg);
+}
+
+.nav-btn.close::after {
+    bottom: 13px;
+    transform: rotate(-45deg);
+}
+
+.nav-btn.close span {
+    opacity: 0;
 }
 
 .nav-btn:hover svg {
