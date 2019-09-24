@@ -10,131 +10,6 @@
 	<script src="./assets/js/header.js" defer></script>
 </head>
 <body>
-    <style>
-        #header {
-            position: relative;
-        }
-
-        .navigation {
-            position: absolute;
-            top: 50px;
-            left: 0;
-            right: 0;
-            min-height: calc(100vh - 50px);
-            background: pink;
-
-        }
-
-        .navigation section[aria-hidden="true"] {
-            display: none !important;
-        }
-
-        .menu-login-area, .menu-signup-area {
-            padding: 40px 24px;
-            background: skyblue;
-        }
-
-        .type-list li:nth-child(n + 2) {
-            margin: 70px 0 0;
-        }
-
-        .type-list .icon {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-        }
-
-        .type-list a {
-            display: block;
-            position: relative;
-            margin: 30px 0 0;
-            padding: 0 20% 30px 0;
-            font-family: UberMove;
-            font-size: 2.8rem;
-            line-height: 36px;
-            border-bottom: 1px solid #000;
-        }
-
-        .type-list a span {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 24px;
-            height: 24px;
-        }
-
-        .type-list a svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .type-list .text {
-            margin: 20px 0 0;
-            font-size: 1.6rem;
-            line-height: 24px;
-        }
-
-        .menu-gnb-area {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .menu-gnb-area > * {
-            flex-basis: 100%;
-        }
-
-        .menu-gnb-area .language-btn {
-            order: 1;
-        }
-
-        .depth2 {
-            padding: 0 24px;
-            background: #f6f6f6;
-        }
-
-        .depth2 li {
-            float: left;
-            position: relative;
-        }
-
-        .depth2 li:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            background: #276efe;
-            transform: scaleX(0);
-            opacity: 0;
-            transition: all .3s;
-        }
-
-        .depth2 li.on:after {
-            opacity: 1;
-            transform: scaleX(1);
-        }
-
-        .depth2 li:nth-child(n + 2) {
-            margin: 0 0 0 24px;
-        }
-
-        .depth2 button {
-            -webkit-appearance: none;
-            appearance: none;
-            border-radius: 0;
-            border: none;
-            background: none;
-            font-family: UberMove;
-            font-size: 18px;
-            line-height: 60px;
-            cursor: pointer;
-        }
-
-        .depth4-list {
-            display: none;
-        }
-    </style>
     <div id="wrap">
         <header id="header">
             <div>
@@ -159,7 +34,7 @@
                     </button>
                 </div>
             </div>
-            <nav class="navigation">
+            <nav class="navigation" style="display: none;">
                 <h2 class="a11y-hidden">Global menu</h2>
                 <section class="menu-login-area" aria-hidden="true">
                     <h3 class="a11y-hidden">Login area</h3>
@@ -326,59 +201,59 @@
             </nav>
         </header>
         <style>
-            .product-panel {display: none;}
+            /* .product-panel {display: none;} */
 
 
             /* 시작 */
         </style>
-        <main id="main" role="main" style="display: none;">
+        <main id="main" role="main">
             <section class="products">
                 <h2 class="a11y-hidden">products</h2>
                 <div class="product-list">
                     <ul role="tablist">
-                        <li class="product-list-tab on" role="tab">
+                        <li class="product-list-tab on" role="tab" aria-controls="section1" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-graph.svg" alt="">
                                 <span>Earn</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section2" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-car.svg" alt="">
                                 <span>Ride</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section3" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-eats.svg" alt="">
                                 <span>Eat</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section4" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-truck.svg" alt="">
                                 <span>Freight</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section5" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-business.svg" alt="">
                                 <span>Business</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section6" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-subway.svg" alt="">
                                 <span>Transit</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section7" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-bike.svg" alt="">
                                 <span>Bike</span>
                             </a>
                         </li>
-                        <li class="product-list-tab" role="tab">
+                        <li class="product-list-tab" role="tab" aria-controls="section8" tabindex="0">
                             <a href="#self">
                                 <img src="./assets/images/product-icon-airplane.svg" alt="">
                                 <span>Fly</span>
@@ -387,7 +262,7 @@
                     </ul>
                 </div>
                 <div class="product-outer">
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel earn" role="tabpanel" id="section1" aria-labelledby="tab1">
                         <div class="detail-text">
                             <em>Get in the driver's seat and get paid</em>
                             <p>Drive on the largest network of active riders.</p>
@@ -398,7 +273,7 @@
                             <img src="./assets/images/earn_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel" style="display: block">
+                    <div class="product-panel ride" role="tabpanel" id="section2" aria-labelledby="tab2">
                         <div class="detail-text">
                             <em>Request a ride now</em>
                             <form class="request-input-box">
@@ -427,7 +302,7 @@
                             <img src="./assets/images/map.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel eat" role="tabpanel" id="section3" aria-labelledby="tab3">
                         <div class="detail-text">
                             <em>Delicious eats, delivered easy</em>
                             <p>The restaurants you love, delivered to your door.</p>
@@ -438,7 +313,7 @@
                             <img src="./assets/images/Eats_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel freight" role="tabpanel" id="section4" aria-labelledby="tab5">
                         <div class="detail-text">
                             <em>A new direction for freight</em>
                             <p>Greater transparency for shippers and carriers to do business together.</p>
@@ -449,7 +324,7 @@
                             <img src="./assets/images/Freight_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel business" role="tabpanel" id="section5" aria-labelledby="tab5">
                         <div class="detail-text">
                             <em>Move your teams and employees</em>
                             <p>Uber for Business helps to simplify business travel, expensing, and customer experiences.</p>
@@ -459,7 +334,7 @@
                             <img src="./assets/images/Business_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel transit" role="tabpanel" id="section6" aria-labelledby="tab6">
                         <div class="detail-text">
                             <em>Public transit in the app</em>
                             <p>Plan your transit journey using real-time information and step-by-step directions right in the app.</p>
@@ -469,17 +344,17 @@
                             <img src="./assets/images/Transit_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel bike" role="tabpanel" id="section7" aria-labelledby="tab7">
                         <div class="detail-text">
                             <em>Bike or scoot there, with JUMP</em>
                             <p>Go farther and have more fun with electric bikes and scooters.</p>
                             <a href="#self" class="btn-link">Get a ride</a>
                         </div>
                         <div class="detail-img">
-                            <img src="./assets/images/ride_2x.jpg" alt="">
+                            <img src="./assets/images/bikes_2x.jpg" alt="">
                         </div>
                     </div>
-                    <div class="product-panel" role="tabpanel">
+                    <div class="product-panel fly" role="tabpanel" id="section8" aria-labelledby="tab8">
                         <div class="detail-text">
                             <em>Ridesharing at new heights</em>
                             <p>Building the future of transportation with urban aerial ridesharing.</p>
@@ -577,7 +452,7 @@
                 </li>
             </ul>
         </main>
-        <footer id="footer" style="display: none;">
+        <footer id="footer">
             <div class="footer-top">
                 <a href="#self" class="footer-logo">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 52" fill="#fff">
@@ -651,7 +526,7 @@
                     <ul class="clear-fix">
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64" title="facebook">
                                     <title>Facebook Shortcut button</title>
                                     <path d="M36.463 60h-10.5V32h-7v-9.625h7v-5.6C25.963 8.725 28.063 4 37.338 4h7.7v9.625h-4.9c-3.675 0-3.85 1.4-3.85 3.85v4.9h8.75L44.163 32h-7.7v28z"></path>
                                 </svg>
@@ -659,7 +534,7 @@
                         </li>
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64" title="twitter">
                                     <title>Twitter Shortcut button</title>
                                     <path d="M58 15.877c-1.94.812-3.89 1.462-6.155 1.625 2.265-1.3 3.89-3.402 4.703-5.83-2.103 1.3-4.378 2.103-6.805 2.59-1.777-2.102-4.702-3.402-7.617-3.402-5.83 0-10.695 4.702-10.695 10.694 0 .813.163 1.625.325 2.428C22.85 23.494 15.07 19.279 9.727 12.8c-.975 1.625-1.462 3.402-1.462 5.342 0 3.727 1.94 6.967 4.702 8.907-1.777 0-3.402-.488-4.865-1.3v.162c0 5.18 3.728 9.395 8.582 10.37-.975.162-1.777.325-2.752.325-.65 0-1.3 0-1.94-.163 1.3 4.215 5.342 7.293 9.882 7.455-3.565 2.915-8.257 4.54-13.284 4.54-.813 0-1.777 0-2.59-.163a29.893 29.893 0 0 0 16.362 4.865c19.601 0 30.296-16.199 30.296-30.296v-1.3c2.102-1.787 3.89-3.565 5.342-5.667z"></path>
                                 </svg>
@@ -667,7 +542,7 @@
                         </li>
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 24 24">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 24 24" title="youtube">
                                     <title>Youtube Shortcut button</title>
                                     <path d="M23.5 6.2c-.3-1-1.1-1.9-2.1-2.1-1.9-.6-9.4-.6-9.4-.6s-7.5 0-9.4.5C1.6 4.3.8 5.1.5 6.1 0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.9 2.1 2.1 1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5c1-.3 1.8-1.1 2.1-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zm-14 9.4V8.4l6.3 3.6-6.3 3.6z"></path>
                                 </svg>
@@ -675,7 +550,7 @@
                         </li>
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64" title="linkedin">
                                     <title>linkedIn Shortcut button</title>
                                     <path d="M48.172 7.998H15.974C11.611 7.998 8 11.61 8 15.973v31.9c0 4.514 3.61 8.125 7.974 8.125h32.047c4.364 0 7.974-3.61 7.974-7.974V15.973c.15-4.364-3.46-7.975-7.823-7.975zm-25.54 40.017h-7.166v-21.8h7.167v21.8zM19.05 23.229c-2.538 0-4.031-1.643-4.031-3.733s1.642-3.733 4.031-3.733c2.539 0 4.032 1.642 4.032 3.733.15 2.09-1.493 3.733-4.032 3.733zm29.714 24.786h-7.167V36.368c0-2.986-1.045-4.927-3.733-4.927-1.941 0-3.135 1.344-3.733 2.688a5.569 5.569 0 0 0-.298 1.791v12.095h-7.168s.15-19.71 0-21.8h7.168v3.136c.896-1.494 2.687-3.584 6.57-3.584 4.778 0 8.361 3.136 8.361 9.855v12.393z"></path>
                                 </svg>
@@ -683,7 +558,7 @@
                         </li>
                         <li>
                             <a href="#self">
-                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64" title="instagram">
                                     <title>Instargram Shortcut button</title>
                                     <path d="M58.022 21.275c-.178-2.671-.534-4.63-1.247-6.233-.712-1.78-1.602-3.205-3.027-4.63-1.425-1.425-2.85-2.315-4.63-3.027-1.603-.713-3.562-1.069-6.233-1.247-2.85-.178-3.74-.178-10.685-.178s-7.836 0-10.685.178c-2.671.178-4.63.534-6.233 1.247-1.78.712-3.205 1.602-4.63 3.027-1.425 1.425-2.315 2.85-3.027 4.63-.713 1.603-1.069 3.562-1.247 6.233C6.2 23.946 6.2 24.837 6.2 31.96s0 7.836.178 10.685c.178 2.671.534 4.63 1.247 6.233.712 1.78 1.602 3.205 3.027 4.63 1.425 1.425 2.85 2.315 4.63 3.027 1.603.713 3.562 1.069 6.233 1.247 2.671.178 3.562.178 10.685.178s7.836 0 10.685-.178c2.671-.178 4.63-.534 6.233-1.247 1.78-.712 3.205-1.602 4.63-3.027 1.425-1.425 2.315-2.85 3.027-4.63.713-1.603 1.069-3.562 1.247-6.233.178-2.671.178-3.562.178-10.685s0-7.836-.178-10.685zm-4.63 21.192c-.178 2.493-.534 3.918-.89 4.808-.535 1.247-1.069 2.137-1.96 3.028-.89.89-1.78 1.424-3.027 1.959-.89.356-2.315.712-4.808.89-2.671.178-3.562.178-10.507.178s-7.658 0-10.507-.178c-2.493-.178-3.918-.534-4.808-.89-1.247-.535-2.137-1.069-3.028-1.96-.89-.89-1.424-1.78-1.959-3.027-.356-.89-.712-2.315-.89-4.808-.178-2.671-.178-3.562-.178-10.507s0-7.658.178-10.507c.178-2.493.534-3.918.89-4.808.535-1.247 1.069-2.137 1.96-3.027.89-.89 1.78-1.425 3.027-1.96.89-.356 2.315-.712 4.808-.89 2.85-.178 3.562-.178 10.507-.178s7.657 0 10.507.178c2.493.178 3.918.534 4.808.89 1.247.535 2.137 1.07 3.028 1.96.89.89 1.424 1.78 1.958 3.027.357.89.713 2.315.89 4.808.179 2.671.179 3.562.179 10.507s0 7.658-.178 10.507z"></path><path d="M32.2 18.604c-7.301 0-13.178 5.877-13.178 13.178S24.899 44.96 32.2 44.96c7.301 0 13.178-5.877 13.178-13.178S39.501 18.604 32.2 18.604zm0 21.726c-4.808 0-8.548-3.918-8.548-8.548s3.918-8.548 8.548-8.548 8.548 3.918 8.548 8.548-3.74 8.548-8.548 8.548zM46.09 15.042c-1.603 0-3.027 1.425-3.027 3.027s1.246 3.028 3.027 3.028c1.603 0 3.027-1.247 3.027-3.028s-1.424-3.205-3.027-3.027z"></path>
                                 </svg>
