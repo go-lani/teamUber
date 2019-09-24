@@ -4,6 +4,257 @@
 /* all device */
 
 /*******************
+*header 영역
+******************/
+#header {
+    position: relative;
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #fff;
+}
+
+.navigation.open {
+    display: block;
+    height: auto;
+    min-height: calc(100vh - 50px);
+}
+
+.navigation section[aria-hidden="true"] {
+    display: none !important;
+}
+
+.menu-login-area, .menu-signup-area {
+    padding: 40px 24px;
+    /* background: skyblue; */
+}
+
+.type-list li:nth-child(n + 2) {
+    margin: 70px 0 0;
+}
+
+.type-list .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.type-list a {
+    display: block;
+    position: relative;
+    margin: 30px 0 0;
+    padding: 0 20% 30px 0;
+    font-family: UberMove;
+    font-size: 2.8rem;
+    line-height: 36px;
+    border-bottom: 1px solid #000;
+}
+
+.type-list a span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.type-list a svg {
+    width: 100%;
+    height: 100%;
+}
+
+.type-list .text {
+    margin: 20px 0 0;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.menu-gnb-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-gnb-area > * {
+    flex-basis: 100%;
+}
+
+.language-btn-box {
+    position: relative;
+    order: 1;
+    margin: 24px 0 0;
+    padding: 24px 24px 0;
+}
+
+.language-btn-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 24px;
+    left: 24px;
+    height: 1px;
+    background: #eee;
+}
+
+.language-btn {
+    display: block;
+    position: relative;
+    padding: 0 0 0 48px;
+    font-size: 1.8rem;
+    line-height: 24px;
+}
+
+.language-btn span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.depth2 {
+    padding: 0 24px;
+    background: #f6f6f6;
+}
+
+.depth2 li {
+    float: left;
+    position: relative;
+}
+
+.depth2 li:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #276efe;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.depth2 li.on:after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.depth2 li:nth-child(n + 2) {
+    margin: 0 0 0 24px;
+}
+
+.depth2 button {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    background: none;
+    font-family: UberMove;
+    font-size: 18px;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.depth3 {
+    padding: 40px 24px 0;
+}
+
+.gnb-list-box {
+    display: block;
+}
+
+.gnb-list-box[aria-hidden="true"] {
+    display: none !important;
+}
+
+.depth3-list li:nth-child(n + 2) {
+    margin: 15px 0 0;
+}
+
+.depth3-list a {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 24px;
+    transition: all .4s;
+}
+
+.depth3-list li.on > a {
+    color: #276efe;
+}
+
+.depth3-list a span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    transition: all .3s;
+}
+
+.depth3-list li.on a span {
+    transform: rotate(-180deg);
+}
+
+.depth3-list li.on a path {
+    fill: #276efe;
+    transition: all .3s;
+}
+
+.depth4-list {
+    display: none;
+    padding: 25px 0 0;
+}
+
+.depth3-list li.on .depth4-list {
+    display: block !important;
+}
+
+.depth4-list li:nth-child(n + 2) {
+    margin: 15px 0 0;
+}
+
+.depth4-list a {
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.cs-cite-box {
+    position: relative;
+    margin: 24px 0 0;
+    padding: 24px 24px 0;
+}
+
+.cs-cite-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 24px;
+    left: 24px;
+    height: 1px;
+    background: #eee;
+}
+
+.cs-list li:nth-child(n + 2) {
+    margin: 12px 0 0;
+}
+
+.cs-list a {
+    display: block;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 24px;
+}
+
+/*******************
 *메인컨텐츠 탭 영역
 ******************/
 .product-list {
@@ -225,258 +476,7 @@
 }
 
 /* 모바일 해상도일때 */
-@media all and (max-width: 768px) {
-    /*******************
-    *header 영역
-    ******************/
-    #header {
-        position: relative;
-    }
-
-    .navigation {
-        display: none;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
-        height: 0;
-        background: #fff;
-    }
-
-    .navigation.open {
-        display: block;
-        height: auto;
-        min-height: calc(100vh - 50px);
-    }
-
-    .navigation section[aria-hidden="true"] {
-        display: none !important;
-    }
-
-    .menu-login-area, .menu-signup-area {
-        padding: 40px 24px;
-        /* background: skyblue; */
-    }
-
-    .type-list li:nth-child(n + 2) {
-        margin: 70px 0 0;
-    }
-
-    .type-list .icon {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-    }
-
-    .type-list a {
-        display: block;
-        position: relative;
-        margin: 30px 0 0;
-        padding: 0 20% 30px 0;
-        font-family: UberMove;
-        font-size: 2.8rem;
-        line-height: 36px;
-        border-bottom: 1px solid #000;
-    }
-
-    .type-list a span {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 24px;
-        height: 24px;
-    }
-
-    .type-list a svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    .type-list .text {
-        margin: 20px 0 0;
-        font-size: 1.6rem;
-        line-height: 24px;
-    }
-
-    .menu-gnb-area {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .menu-gnb-area > * {
-        flex-basis: 100%;
-    }
-
-    .language-btn-box {
-        position: relative;
-        order: 1;
-        margin: 24px 0 0;
-        padding: 24px 24px 0;
-    }
-
-    .language-btn-box::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 24px;
-        left: 24px;
-        height: 1px;
-        background: #eee;
-    }
-
-    .language-btn {
-        display: block;
-        position: relative;
-        padding: 0 0 0 48px;
-        font-size: 1.8rem;
-        line-height: 24px;
-    }
-
-    .language-btn span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 22px;
-        height: 22px;
-    }
-
-    .depth2 {
-        padding: 0 24px;
-        background: #f6f6f6;
-    }
-
-    .depth2 li {
-        float: left;
-        position: relative;
-    }
-
-    .depth2 li:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 4px;
-        background: #276efe;
-        transform: scaleX(0);
-        opacity: 0;
-        transition: all .3s;
-    }
-
-    .depth2 li.on:after {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-
-    .depth2 li:nth-child(n + 2) {
-        margin: 0 0 0 24px;
-    }
-
-    .depth2 button {
-        -webkit-appearance: none;
-        appearance: none;
-        border-radius: 0;
-        border: none;
-        background: none;
-        font-family: UberMove;
-        font-size: 18px;
-        line-height: 60px;
-        cursor: pointer;
-    }
-
-    .depth3 {
-        padding: 40px 24px 0;
-    }
-
-    .gnb-list-box {
-        display: block;
-    }
-
-    .gnb-list-box[aria-hidden="true"] {
-        display: none !important;
-    }
-
-    .depth3-list li:nth-child(n + 2) {
-        margin: 15px 0 0;
-    }
-
-    .depth3-list a {
-        display: block;
-        position: relative;
-        font-weight: 500;
-        font-size: 1.8rem;
-        line-height: 24px;
-        transition: all .4s;
-    }
-
-    .depth3-list li.on > a {
-        color: #276efe;
-    }
-
-    .depth3-list a span {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 24px;
-        height: 24px;
-        transition: all .3s;
-    }
-
-    .depth3-list li.on a span {
-        transform: rotate(-180deg);
-    }
-
-    .depth3-list li.on a path {
-        fill: #276efe;
-        transition: all .3s;
-    }
-
-    .depth4-list {
-        display: none;
-        padding: 25px 0 0;
-    }
-
-    .depth3-list li.on .depth4-list {
-        display: block !important;
-    }
-
-    .depth4-list li:nth-child(n + 2) {
-        margin: 15px 0 0;
-    }
-
-    .depth4-list a {
-        display: block;
-        font-weight: 400;
-        font-size: 1.6rem;
-    }
-
-    .cs-cite-box {
-        position: relative;
-        margin: 24px 0 0;
-        padding: 24px 24px 0;
-    }
-
-    .cs-cite-box::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 24px;
-        left: 24px;
-        height: 1px;
-        background: #eee;
-    }
-
-    .cs-list li:nth-child(n + 2) {
-        margin: 12px 0 0;
-    }
-
-    .cs-list a {
-        display: block;
-        font-weight: 500;
-        font-size: 1.8rem;
-        line-height: 24px;
-    }
-
+@media all and (max-width: 1024px) {
     /*******************
     *메인컨텐츠 탭 영역
     ******************/
@@ -491,6 +491,7 @@
         overflow-y: hidden;
         white-space: nowrap;
         font-size: 0;
+        text-align: center;
     }
 
     .product-list-tab a {
@@ -600,7 +601,7 @@
 }
 
 /* 태블릿 해상도일때 */
-@media all and (min-width: 769px) and (max-width: 1024px) {
+/* @media all and (min-width: 769px) and (max-width: 1024px) {
     #footer {
         padding: 60px 40px 65px;
     }
@@ -659,7 +660,7 @@
     .footer-sitemap-list a {
         font-size: 1.4rem;
     }
-}
+} */
 
  /* PC 해상도일때 */
 @media all and (min-width: 1025px) {

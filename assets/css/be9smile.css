@@ -151,14 +151,8 @@
     fill: #276efe;
 }
 
-
- /* 모바일 해상도일때 */
- @media all and (max-width: 768) {
-
-}
-
- /* 태블릿 해상도일때 */
-@media all and (min-width: 769) and (max-width: 1024px) {
+/* 모바일 ~ 태블릿 */
+@media all and (max-width: 1024px) {
 
 }
 
