@@ -1,21 +1,13 @@
 @charset "utf-8";
 
 /* all device */
+/* main */
 img {
     max-width: 100%;
 }
 
-/* main */
-#main {
-    /* background: yellow; */
-    padding: 0 24px;
-}
-
 .text-link {
     display: inline-block;
-    font-size: 1.6rem;
-    list-style: none;
-    line-height: 24px;
     color: #000;
     padding-bottom: 6px;
     position: relative;
@@ -37,6 +29,10 @@ img {
 }
 
 /* products 공통부분 */
+.detail-img {
+    margin: 0 -24px;
+}
+
 .product-panel {
     display: none;
     margin-top: 40px;
@@ -48,37 +44,31 @@ img {
 
 .detail-text {
     position: relative;
-    min-height: 300px;
 }
 
 .detail-text em {
     font-family: UberMove;
-    font-size: 3.6rem;
     font-weight: 500;
 }
 
 .detail-text p {
-    margin-top: 20px;
     font-size: 1.6rem;
+    margin-top: 20px;
 }
 
 .detail-text .btn-link {
-    background: #000;;
+    background: #000;
     border: 1px solid #000;
     color: #fff;
     padding: 14px 25px;
-    font-size: 1.6rem;
-    font-weight: 500;
     display: inline-block;
     margin-top: 48px;
+    font-weight: 500;
+    font-size: 1.6rem;
 }
 
 .detail-text .text-link {
-    margin: 20px 130px 0 0;
-}
-
-.detail-img {
-    margin: 0 -24px;
+    margin: 20px 0 0;
 }
 
 /* ride 파트 */
@@ -87,7 +77,7 @@ img {
     margin-top: 20px;
 }
 
-.request-input-box::after{
+.request-input-box::after {
     content: "";
     display: block;
     border-left: 1px solid #000;
@@ -96,6 +86,8 @@ img {
     position: absolute;
     top: 90px;
     left: 18px;
+    /* .reqeust-input-bot em 폰트크기에 따라 위치가 달라집니다.
+    수정 필요할 것 같습니다.. */
 }
 
 /* pickup, destination 공통 */
@@ -108,64 +100,51 @@ fieldset {
     border: none;
 }
 
+fieldset::before {
+    content: '';
+    border: 1px solid #000;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+fieldset input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+fieldset a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 input::placeholder {
     font-size: 1.6rem;
 }
 
 /* fieldset - pickup */
 .pickup::before {
-    content: '';
-    border: 1px solid #000;
-    width: 5px;
-    height: 5px;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
 }
 
 .pickup input {
-    background: transparent;
-    width: 100%;
-    height: 100%;
-    border: none;
-    line-height: 100%;
+    /* 수직 가운데 정렬이 왜 안될까요?? */
 }
 
 .pickup a {
-    position: absolute;
     right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 /* fieldset - destination */
-.destination::before {
-    content: '';
-    display: block;
-    border: 1px solid #000;
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-}
-
-.destination input {
-    background: transparent;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 .destination a {
     background: #eeeeee;
-    position: absolute;
     right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
     padding: 18px;
 }
 
@@ -174,29 +153,21 @@ input::placeholder {
 }
 
 /* service 섹션 */
-.service {
-    padding: 30px 0 60px;
-}
-
-.service-info {
-    margin: 0 0 30px;
-}
-
 .service-info h2 {
     margin: 0 0 12px;
-    font-size: 3.6rem;
     font-weight: 500;
     color: #000;
 }
 
 .service-bg {
     display: block;
+    /* block 왜 했을까요.. */
+    /* 크기 일정부분 커지면 뷰포인트에 꽉차지 않습니다 */
 }
 
 /* ad-video 아티클 */
 .ad-video {
     position: relative;
-    margin-bottom: 94px;
 }
 
 .video-info-layer {
@@ -204,27 +175,22 @@ input::placeholder {
     left: 0;
     bottom: 0;
     z-index: 1;
-    padding: 30px 24px;
 }
 
 .video-info-layer p {
     margin-bottom: 12px;
-    font-size: 2.8rem;
     font-weight: 500;
     color: #fff;
     line-height: 36px;
 }
 
 .youtube-link {
-    margin-bottom: 24px;
     color: #fff;
-    font-size: 1.6rem;
     display: block;
     line-height: 24px;
 }
 
 .video-info-layer svg {
-    font-size: 3.6rem;
     margin-right: 12px;
     line-height: 24px;
     height: 100%;
@@ -250,6 +216,10 @@ input::placeholder {
     height: 2px;
 }
 
+.video-box {
+    margin: 0 -24px;
+}
+
 .video-box video {
     width: 100%;
 }
@@ -257,11 +227,11 @@ input::placeholder {
 /* safety 섹션 */
 .safety-details {
     margin-bottom: 30px;
+    /* 옆 패딩이나 마진도 필요할 것 같습니다. */
 }
 
 .safety-details h2 {
     line-height: 36px;
-    font-size: 2.8rem;
     font-weight: 500;
     color: #000;
     margin-bottom: 12px;
@@ -280,10 +250,6 @@ input::placeholder {
     text-underline-position: under;
 }
 
-.safety-bg {
-    padding: 87px 0;
-}
-
 /* sitemap 정보섹션 */
 .sitemap-info {
     padding: 30px 0;
@@ -297,6 +263,7 @@ input::placeholder {
     margin-bottom: 30px;
 }
 
+/* sitemap 정보섹션 */
 .sitemap-info div:last-child {
     margin: 0;
 }
@@ -342,7 +309,6 @@ input::placeholder {
 .signup-list p {
     float: left;
     width: 70%;
-    font-size: 2.8rem;
     line-height: 44px;
     font-weight: 500;
     word-break: keep-all;
@@ -371,8 +337,8 @@ input::placeholder {
 }
 
 .signup-list svg {
+    background: yellow;
     float: right;
-    font-size: 4.4rem;
     line-height: 24px;
     width: 30px;
     height: 44px;
@@ -382,6 +348,88 @@ input::placeholder {
 /* 모바일 ~ 태블릿 */
 @media all and (max-width: 1024px) {
 
+    /* main */
+    #main {
+        padding: 0 24px;
+    }
+
+    .text-link {
+        font-size: 1.6rem;
+        line-height: 24px;
+    }
+
+    /* products 공통부분 */
+    .detail-text {
+        min-height: 300px;
+    }
+
+    .detail-text em {
+        font-size: 3.6rem;
+    }
+
+    /* service 섹션 */
+    .service {
+        padding: 30px 0 60px;
+    }
+
+    .service-info {
+        margin: 0 0 30px;
+    }
+
+    .service-info h2 {
+        font-size: 3.6rem;
+    }
+
+    /* ad-video 아티클 */
+    .ad-video {
+        position: relative;
+        margin-bottom: 94px;
+    }
+
+    .video-info-layer {
+        padding: 30px 24px;
+    }
+
+    .video-info-layer p {
+        font-size: 2.8rem;
+    }
+
+    .youtube-link {
+        margin-bottom: 24px;
+        font-size: 1.6rem;
+    }
+
+    .video-info-layer svg {
+        font-size: 3.6rem;
+    }
+
+    .video-box {
+        margin: 0 -24px;
+    }
+
+    .video-box video {
+        width: 100%;
+    }
+
+    /* safety 섹션 */
+    .safety-details h2 {
+        font-size: 2.8rem;
+    }
+
+    .safety-bg {
+        padding: 87px 0;
+    }
+
+    /* signup list 섹션 */
+    .signup-list p {
+        font-size: 2.8rem;
+    }
+
+    .signup-list span {
+        float: right;
+        width: 30%;
+        line-height: 36px;
+    }
 }
 
 /* PC 해상도일때 */
