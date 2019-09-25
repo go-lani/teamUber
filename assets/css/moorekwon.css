@@ -33,17 +33,16 @@ img {
     margin: 0 -24px;
 }
 
+.detail-img img {
+    width: 100%;
+}
+
 .product-panel {
     display: none;
-    margin-top: 40px;
 }
 
 .product-panel.on {
     display: block !important;
-}
-
-.detail-text {
-    position: relative;
 }
 
 .detail-text em {
@@ -52,7 +51,6 @@ img {
 }
 
 .detail-text p {
-    font-size: 1.6rem;
     margin-top: 20px;
 }
 
@@ -67,13 +65,14 @@ img {
     font-size: 1.6rem;
 }
 
-.detail-text .text-link {
+.detail-text .text-link-box {
     margin: 20px 0 0;
 }
 
 /* ride 파트 */
 /* form 태그 */
 .request-input-box {
+    position: relative;
     margin-top: 20px;
 }
 
@@ -82,25 +81,29 @@ img {
     display: block;
     border-left: 1px solid #000;
     z-index: 1;
-    height: 45px;
     position: absolute;
-    top: 90px;
+    top: 30px;
     left: 18px;
+    bottom: 30px;
     /* .reqeust-input-bot em 폰트크기에 따라 위치가 달라집니다.
     수정 필요할 것 같습니다.. */
 }
 
 /* pickup, destination 공통 */
-fieldset {
+.request-input-box fieldset {
     background: #f6f6f6;
     margin-top: 5px;
     height: 50px;
     position: relative;
-    padding: 10px 30px;
+    padding: 10px 52px 10px 30px;
     border: none;
 }
 
-fieldset::before {
+.request-input-box fieldset:first-child {
+    margin-top: 0;
+}
+
+.request-input-box fieldset::before {
     content: '';
     border: 1px solid #000;
     width: 5px;
@@ -111,41 +114,44 @@ fieldset::before {
     transform: translateY(-50%);
 }
 
-fieldset input {
+.request-input-box fieldset.pickup::before {
+    border-radius: 50%;
+}
+
+.request-input-box fieldset input {
     background: transparent;
     width: 100%;
     height: 100%;
     border: none;
-}
-
-fieldset a {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-input::placeholder {
     font-size: 1.6rem;
 }
 
-/* fieldset - pickup */
-.pickup::before {
-    border-radius: 50%;
+.request-input-box fieldset input::placeholder {
+    font-size: 1.6rem;
 }
 
-.pickup input {
-    /* 수직 가운데 정렬이 왜 안될까요?? */
-}
-
-.pickup a {
-    right: 15px;
-}
-
-/* fieldset - destination */
-.destination a {
-    background: #eeeeee;
-    right: 0px;
+.request-input-box fieldset a {
+    position: absolute;
+    top: 50%;
+    right: 0;
     padding: 18px;
+    transform: translateY(-50%);
+}
+
+.request-input-box fieldset.destination a {
+    background: #eee;
+    transition: all .4s;
+}
+
+.request-input-box fieldset a svg {
+    width: 16px;
+    height: 16px;
+    fill: #c5c5c5;
+    transition: all .4s;
+}
+
+.request-input-box fieldset a:hover svg {
+    fill: #276efe;
 }
 
 .ride .text-link {
@@ -155,6 +161,7 @@ input::placeholder {
 /* service 섹션 */
 .service-info h2 {
     margin: 0 0 12px;
+    font-family: Ubermove;
     font-weight: 500;
     color: #000;
 }
@@ -178,10 +185,8 @@ input::placeholder {
 }
 
 .video-info-layer p {
-    margin-bottom: 12px;
-    font-weight: 500;
+    font-family: Ubermove;
     color: #fff;
-    line-height: 36px;
 }
 
 .youtube-link {
@@ -225,23 +230,10 @@ input::placeholder {
 }
 
 /* safety 섹션 */
-.safety-details {
-    margin-bottom: 30px;
-    /* 옆 패딩이나 마진도 필요할 것 같습니다. */
-}
-
 .safety-details h2 {
-    line-height: 36px;
+    font-family: UberMove;
     font-weight: 500;
     color: #000;
-    margin-bottom: 12px;
-}
-
-.safety-details p {
-    font-size: 1.6rem;
-    line-height: 24px;
-    font-weight: 400;
-    margin-bottom: 12px;
 }
 
 .safety-details .here-link {
@@ -251,25 +243,17 @@ input::placeholder {
 }
 
 /* sitemap 정보섹션 */
-.sitemap-info {
-    padding: 30px 0;
-}
-
-.sitemap-info img {
-    padding-bottom: 24px;
-}
-
-.sitemap-info div {
-    margin-bottom: 30px;
-}
-
-/* sitemap 정보섹션 */
 .sitemap-info div:last-child {
     margin: 0;
 }
 
+.sitemap-info .description {
+    margin: 0 0 15px;
+}
+
 .sitemap-info .description dt {
     margin-bottom: 12px;
+    font-family: Ubermove;
     font-size: 1.8rem;
     line-height: 24px;
     font-weight: 500;
@@ -284,19 +268,13 @@ input::placeholder {
     font-weight: 400;
 }
 
+.sitemap-info .description dd:last-child {
+    margin: 0;
+}
+
 /* signup list 섹션 */
-.signup-list {
-    padding: 30px 0;
-}
-
-.signup-list li {
-    min-height: 36px;
-    margin-bottom: 50px;
-}
-
 .signup-list li a {
     display: block;
-    padding-bottom: 30px;
     border-bottom: 1px solid #000;
 }
 
@@ -309,8 +287,9 @@ input::placeholder {
 .signup-list p {
     float: left;
     width: 70%;
-    line-height: 44px;
+    font-family: Ubermove;
     font-weight: 500;
+    line-height: 44px;
     word-break: keep-all;
     color: #000;
 }
@@ -337,7 +316,6 @@ input::placeholder {
 }
 
 .signup-list svg {
-    background: yellow;
     float: right;
     line-height: 24px;
     width: 30px;
@@ -363,8 +341,19 @@ input::placeholder {
         min-height: 300px;
     }
 
+    .detail-text p {
+        margin-top: 20px;
+        font-size: 1.6rem;
+        line-height: 24px;
+    }
+
     .detail-text em {
         font-size: 3.6rem;
+        line-height: 40px;
+    }
+
+    .product-outer {
+        margin: 40px 0 0;
     }
 
     /* service 섹션 */
@@ -382,16 +371,19 @@ input::placeholder {
 
     /* ad-video 아티클 */
     .ad-video {
-        position: relative;
         margin-bottom: 94px;
     }
 
     .video-info-layer {
+        left: -24px;
         padding: 30px 24px;
     }
 
     .video-info-layer p {
+        margin-bottom: 12px;
+        font-weight: 500;
         font-size: 2.8rem;
+        line-height: 36px;
     }
 
     .youtube-link {
@@ -412,15 +404,75 @@ input::placeholder {
     }
 
     /* safety 섹션 */
+    .safety-details {
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
+
     .safety-details h2 {
+        margin-bottom: 12px;
         font-size: 2.8rem;
+        line-height: 36px;
+    }
+
+    .safety-details p {
+        font-size: 1.6rem;
+        line-height: 24px;
+        margin-bottom: 12px;
     }
 
     .safety-bg {
         padding: 87px 0;
     }
 
+    .safety-bg img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* sitemap 정보섹션 */
+    .sitemap-info {
+        padding: 30px 0;
+    }
+
+    .sitemap-info img {
+        margin-bottom: 24px;
+    }
+
+    .sitemap-info div {
+        margin-bottom: 30px;
+    }
+
+    /* sitemap 정보섹션 */
+    .sitemap-info div:last-child {
+        margin: 0;
+    }
+
+    .sitemap-info .description dt {
+        margin-bottom: 12px;
+        font-size: 1.8rem;
+        line-height: 24px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .sitemap-info .description dd {
+        margin-bottom: 12px;
+        color: currentColor;
+        font-size: 1.6rem;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
     /* signup list 섹션 */
+    .signup-list {
+        padding: 30px 0;
+    }
+
+    .signup-list li {
+        margin-bottom: 50px;
+    }
+
     .signup-list p {
         font-size: 2.8rem;
     }
@@ -429,6 +481,10 @@ input::placeholder {
         float: right;
         width: 30%;
         line-height: 36px;
+    }
+
+    .signup-list li a {
+        padding-bottom: 30px;
     }
 }
 
