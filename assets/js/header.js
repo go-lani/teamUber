@@ -18,6 +18,7 @@ $('.util-list li a').on('click', function(){
     if (!$nav.hasClass('open')) {
         $nav.addClass('open');
         $layout.css('display', 'none');
+        $('#wrap').css('overflow', 'visible');
     }
 
     $li.addClass('on').siblings().removeClass('on');
@@ -33,12 +34,14 @@ $('.nav-btn').on('click', function (e) {
         $(this).removeClass('close');
         $nav.removeClass('open');
         $layout.css('display', 'block');
+        $('#wrap').css('overflow', 'hidden');
     } else {
         $(this).addClass('close');
         // $('body').css('overflow-y', 'scroll');
         $('.menu-gnb-area').attr('aria-hidden', false);
         $nav.addClass('open');
         $layout.css('display', 'none');
+        $('#wrap').css('overflow', 'visible');
     }
 });
 

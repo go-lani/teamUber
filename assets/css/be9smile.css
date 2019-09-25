@@ -81,7 +81,7 @@
 
 /* 모바일 ~ 태블릿 */
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1032px) {
     #header {
         height: 50px;
     }
@@ -180,7 +180,7 @@
 
  /* PC 해상도일때 */
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 1033px) {
 
     #header {
         height: 70px;

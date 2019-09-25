@@ -2,6 +2,11 @@
 
 
 /* all device */
+#wrap {
+    position: relative;
+    overflow: hidden;
+}
+
 
 /*******************
 *header 영역
@@ -196,6 +201,7 @@
 .product-list-tab a {
     display: block;
     position: relative;
+    padding: 28px 14px 33px;
     text-align: center;
 }
 
@@ -219,6 +225,7 @@
 
 .product-list-tab span {
     display: block;
+    font-weight: 500;
     transition: all .4s;
 }
 
@@ -351,10 +358,6 @@
 
 .footer-sns li:first-child {
     margin-left: 0;
-}
-
-.footer-sns a {
-    display: block;
 }
 
 /*******************
@@ -563,10 +566,6 @@
         text-align: center;
     }
 
-    .product-list-tab a {
-        padding: 28px 14px 33px;
-    }
-
     .product-list-tab a::after {
         bottom: 1px;
         height: 4px;
@@ -578,7 +577,6 @@
     }
     .product-list-tab span {
         margin: 25px 0 0;
-        font-weight: 500;
         font-size: 1.6rem;
     }
 
@@ -723,6 +721,34 @@
 
  /* PC 해상도일때 */
 @media all and (min-width: 1025px) {
+
+    #wrap {
+        overflow: hidden !important;
+    }
+
+    .navigation {
+        display: none !important;
+    }
+
+    #main, #footer {
+        display: block !important;
+    }
+
+    .product-list ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .product-list-tab a::after {
+        bottom: 0;
+    }
+
+    .product-list-tab span {
+        margin: 22px 0 0;
+        font-size: 1.4rem;
+        line-height: 20px;
+    }
+
     #footer {
         padding: 100px 24px 55px;
     }
@@ -811,11 +837,14 @@
         position: absolute;
         right: 0;
         bottom: -180px;
-        z-index: 1;
     }
 
     .footer-sns li {
-        margin: 0 0 0 20px;
+        margin: 0 0 0 25px;
+    }
+
+    .footer-sns li:first-child {
+        margin: 0;
     }
 
     .footer-sns svg {
