@@ -6,7 +6,6 @@
     background-color: #000;
     display: block;
     width: 100%;
-    height: 50px;
 }
 
 .header-inner {
@@ -57,6 +56,10 @@
     padding: 10px 12px;
 }
 
+.language-btn {
+    color: #fff;
+}
+
 .login-btn {
     color: #fff;
 }
@@ -76,86 +79,162 @@
     background: #e2e2e2;
 }
 
-.nav-btn {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    background: none;
-    border: none;
-    padding: 0 6px;
-    margin-left: 6px;
-    cursor: pointer;
-    width: 28px;
-    height: 28px;
-    transition: all .4s;
-}
-
-.nav-btn::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 6px;
-    right: 6px;
-    width: 16px;
-    height: 2px;
-    background: #fff;
-    transition: all .4s;
-}
-
-.nav-btn::after {
-    content: '';
-    position: absolute;
-    bottom: 8px;
-    left: 6px;
-    right: 6px;
-    width: 16px;
-    height: 2px;
-    background: #fff;
-    transition: all .4s;
-}
-
-.nav-btn span {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 6px;
-    right: 6px;
-    width: 16px;
-    height: 2px;
-    margin: -1px 0 0;
-    background: #ffffff;
-    text-indent: -28px;
-    transition: all .4s;
-}
-
-.nav-btn.close {
-    transform: rotate(360deg);
-}
-
-.nav-btn.close::before {
-    top: 13px;
-    transform: rotate(45deg);
-}
-
-.nav-btn.close::after {
-    bottom: 13px;
-    transform: rotate(-45deg);
-}
-
-.nav-btn.close span {
-    opacity: 0;
-}
-
-.nav-btn:hover svg {
-    transition-duration: 0.3s;
-    fill: #276efe;
-}
 
 /* 모바일 ~ 태블릿 */
-@media all and (max-width: 1024px) {
 
+@media all and (max-width: 1024px) {
+    #header {
+        height: 50px;
+    }
+
+    .util-list li:first-child {
+        margin-left: 0;
+        display: none;
+    }
+
+    /* .util-list a {
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        padding: 10px 12px;
+    } */
+
+    .nav-btn {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        background: none;
+        border: none;
+        padding: 0 6px;
+        margin-left: 6px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        transition: all .4s;
+    }
+
+    .nav-btn::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 6px;
+        right: 6px;
+        width: 16px;
+        height: 2px;
+        background: #fff;
+        transition: all .4s;
+    }
+
+    .nav-btn::after {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 6px;
+        right: 6px;
+        width: 16px;
+        height: 2px;
+        background: #fff;
+        transition: all .4s;
+    }
+
+    .nav-btn span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        right: 6px;
+        width: 16px;
+        height: 2px;
+        margin: -1px 0 0;
+        background: #ffffff;
+        text-indent: -28px;
+        transition: all .4s;
+    }
+
+    .nav-btn.close {
+        transform: rotate(360deg);
+    }
+
+    .nav-btn.close::before {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+
+    .nav-btn.close::after {
+        bottom: 13px;
+        transform: rotate(-45deg);
+    }
+
+    .nav-btn.close span {
+        opacity: 0;
+    }
+
+    .nav-btn:hover svg {  /* 수정 해야함! */
+        transition-duration: 0.3s;
+        fill: #276efe;
+    }
+
+    .menu-list {
+        display: none;
+    }
 }
 
  /* PC 해상도일때 */
+
 @media all and (min-width: 1025px) {
+
+    #header {
+        height: 70px;
+    }
+
+    .header-inner {
+        margin: 0 auto;
+        max-width: 1030px;
+    }
+
+    .logo a {
+        display: block;
+    }
+
+    .logo svg {
+        width: 50px;
+        height: 16px;
+    }
+
+    .logo svg:hover {
+        transition-duration: 0.5s;
+        fill: #276efe;
+    }
+
+    .util-box {
+        display: flex;
+        align-items: center;
+        order: 1;
+    }
+
+    .util-list {
+        margin: 0;
+    }
+
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-list {
+        /* background-color: skyblue; */
+        width: 300px;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        margin-left: -400px;
+    }
+
+    .menu-list li {
+        line-height: 70px;
+        color: #eee;
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
