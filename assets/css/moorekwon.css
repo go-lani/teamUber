@@ -545,7 +545,7 @@ img {
     }
 
     .product-panel:not([aria-labelledby="prod-ride-tab"]) .detail-img {
-        opacity: 0;
+        opacity: 1;
     }
 
     .product-panel:not([aria-labelledby="prod-ride-tab"]).on .detail-img, .product-panel.on .ride-bg {
@@ -575,7 +575,7 @@ img {
         left: 0;
         z-index: -1;
         margin: 0;
-        opacity: 0;
+        opacity: 1;
     }
 
     .video-box {

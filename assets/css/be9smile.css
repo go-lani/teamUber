@@ -256,6 +256,7 @@
     .menu-list {
         display: flex;
         position: absolute;
+        top: 0;
         left: 92px;
     }
 
