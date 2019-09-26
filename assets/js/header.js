@@ -6,10 +6,11 @@ var $gnbDepth3 = $('.depth3 .gnb-list-box');
 
 var $layout = $('#main, #footer');
 
-$('.util-list li a').on('click', function(){
+$('.util-list li.member a').on('click', function(){
     var $li  = $(this).parent();
-    var $idx = $li.index();
+    var $idx = $li.index() - 1;
 
+    console.log($idx);
     $('.nav-btn').addClass('close');
 
     // $('body').css('overflow-y', 'scroll');
