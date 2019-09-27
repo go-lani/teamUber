@@ -1,3 +1,4 @@
+var viewport = window.matchMedia('(min-width: 1024px)');
 var $nav    = $('.navigation');
 var $gnbTab = $nav.children('section');
 var $gnbDepth2 = $('.depth2 > li > button');
@@ -23,6 +24,8 @@ $('.util-list li.member a').on('click', function(){
     }
 
     $li.addClass('on').siblings().removeClass('on');
+    $(this).attr('aria-selected', true);
+    $(this).parent().siblings().children('a').attr('aria-selected', false);
     $gnbTab.eq($idx).attr('aria-hidden', false).siblings().attr('aria-hidden', true);
 });
 
@@ -36,6 +39,7 @@ $('.nav-btn').on('click', function (e) {
         $nav.removeClass('open');
         $layout.css('display', 'block');
         $('#wrap').css('overflow', 'hidden');
+        $('.util-list li.member a').attr('aria-selected', false);
     } else {
         $(this).addClass('close');
         // $('body').css('overflow-y', 'scroll');
@@ -55,5 +59,23 @@ $gnbDepth2.on('click', function (e) {
 });
 
 $('.depth3-list > li > a').on('click', function () {
-    $(this).parent().toggleClass('on').siblings().removeClass('on');
+    if($(this).parent().hasClass('on')) {
+        $(this).parent().removeClass('on');
+        $(this).attr('aria-selected', false);
+    } else {
+        $(this).parent().addClass('on').siblings().removeClass('on');
+        $(this).attr('aria-selected', true).parent().siblings().children('a').attr('aria-selected', false);
+    }
 });
+
+// $(window).on('resize', function () {
+//     if (viewport.matches) {
+//         if($('.navigation').hasClass('open')) {
+//             $('.navigation').removeClass('open');
+//         }
+//     } else {
+//         if($('.navigation').hasClass('open')) {
+//             $('.navigation').removeClass('open');
+//         }
+//     }
+// })

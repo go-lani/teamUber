@@ -34,7 +34,7 @@
                             </a>
                         </li>
                         <li class="member">
-                            <a href="#self" class="login-btn">
+                            <a href="#self" class="login-btn" aria-labelledby="menu-login" aria-selected="false">
                                 <svg viewBox="0 0 24 24" fill="none">
                                     <title>Log in</title>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z"></path>
@@ -42,7 +42,7 @@
                                 Log in
                             </a>
                         </li>
-                        <li class="member"><a href="#self" class="signup-btn">Sign up</a></li>
+                        <li class="member"><a href="#self" aria-labelledby="menu-join" aria-selected="false" class="signup-btn">Sign up</a></li>
                     </ul>
                     <button type="button" class="nav-btn" aria-label="navigation button">
                         <span>gnb button</span>
@@ -57,7 +57,7 @@
             </div>
             <nav class="navigation">
                 <h2 class="a11y-hidden">Global menu</h2>
-                <section class="menu-login-area" aria-hidden="true">
+                <section id="menu-login" class="menu-login-area" aria-hidden="true">
                     <h3 class="a11y-hidden">Login area</h3>
                     <ul class="type-list">
                         <li>
@@ -95,7 +95,7 @@
                     </ul>
                 </section>
 
-                <section class="menu-signup-area" aria-hidden="true">
+                <section id="menu-signup" class="menu-signup-area" aria-hidden="true">
                     <h3 class="a11y-hidden">Sign up area</h3>
                     <ul class="type-list">
                         <li>
@@ -157,7 +157,7 @@
                             <h4 class="a11y-hidden">Our products menu</h4>
                             <ul class="depth3-list">
                                 <li>
-                                    <a href="#self">
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
                                         Ride
                                         <span aria-hidden="true">
                                             <svg viewBox="0 0 24 24" fill="none">
@@ -176,7 +176,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
                                         Drive
                                         <span aria-hidden="true">
                                             <svg viewBox="0 0 24 24" fill="none">
@@ -194,7 +194,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
                                         Uber Eats
                                         <span aria-hidden="true">
                                             <svg viewBox="0 0 24 24" fill="none">
@@ -209,7 +209,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
                                         Uber for Business
                                         <span aria-hidden="true">
                                             <svg viewBox="0 0 24 24" fill="none">
@@ -224,7 +224,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#self">
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
                                         Freight
                                         <span aria-hidden="true">
                                             <svg viewBox="0 0 24 24" fill="none">
@@ -465,7 +465,7 @@
                     </a>
                     <a href="#self" class="text-link">See the stories</a>
                 </div>
-                <div class="video-box">
+                <div class="video-box" aria-hidden="true">
                     <video src="./assets/video/ad-video.mp4" muted autoplay loop></video>
                 </div>
             </article>
