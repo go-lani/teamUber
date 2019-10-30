@@ -1,0 +1,706 @@
+@charset "utf-8";
+
+/* all device */
+/* main */
+img {
+    max-width: 100%;
+}
+
+.text-link {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #000;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+.text-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #aaa;
+    transition: background .4s;
+}
+
+.text-link:hover::after {
+    background: #000;
+}
+
+/* products 공통부분 */
+.detail-img {
+    margin: 0 -24px;
+}
+
+.detail-img img {
+    width: 100%;
+}
+
+.product-panel {
+    display: none;
+}
+
+.product-panel.on {
+    display: block !important;
+}
+
+.detail-text em {
+    font-family: UberMove;
+    font-weight: 500;
+}
+
+.detail-text p {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.detail-text .btn-link {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    padding: 14px 25px;
+    display: inline-block;
+    margin-top: 48px;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.detail-text .text-link-box {
+    margin: 20px 0 0;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+/* form 태그 */
+.request-input-box {
+    position: relative;
+    margin-top: 20px;
+}
+
+.request-input-box::after {
+    content: "";
+    display: block;
+    border-left: 1px solid #000;
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    bottom: 30px;
+    /* .reqeust-input-bot em 폰트크기에 따라 위치가 달라집니다.
+    수정 필요할 것 같습니다.. */
+}
+
+/* pickup, destination 공통 */
+.request-input-box fieldset {
+    background: #f6f6f6;
+    margin-top: 5px;
+    height: 50px;
+    position: relative;
+    padding: 10px 52px 10px 30px;
+    border: none;
+}
+
+.request-input-box fieldset:first-child {
+    margin-top: 0;
+}
+
+.request-input-box fieldset::before {
+    content: '';
+    border: 1px solid #000;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.request-input-box fieldset.pickup::before {
+    border-radius: 50%;
+}
+
+.request-input-box fieldset input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.request-input-box fieldset input::placeholder {
+    font-size: 1.6rem;
+}
+
+.request-input-box fieldset a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 18px;
+    transform: translateY(-50%);
+}
+
+.request-input-box fieldset.destination a {
+    background: #eee;
+    transition: all .4s;
+}
+
+.request-input-box fieldset a svg {
+    width: 16px;
+    height: 16px;
+    fill: #c5c5c5;
+    transition: all .4s;
+}
+
+.request-input-box fieldset a:hover svg {
+    fill: #276efe;
+}
+
+.ride .text-link {
+    margin-top: 40px !important;
+}
+
+/* service 섹션 */
+.service-info h2 {
+    margin: 0 0 12px;
+    font-family: Ubermove;
+    font-weight: 500;
+    color: #000;
+}
+
+.service-bg {
+    display: block;
+}
+
+.service-bg img {
+    width: 100%;
+}
+
+/* ad-video 아티클 */
+.ad-video {
+    position: relative;
+}
+
+.video-info-layer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.video-info-layer p {
+    font-family: Ubermove;
+    color: #fff;
+}
+
+.youtube-link {
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #fff;
+    display: block;
+}
+
+.video-info-layer svg {
+    margin-right: 12px;
+}
+
+.video-info-layer span {
+    display: inline-block;
+    font-weight: 500;
+}
+
+.video-info-layer .text-link {
+    color: #fff;
+    font-weight: 500;
+}
+
+.video-info-layer .text-link::after {
+    background: #fff;
+    transition: height .4;
+}
+
+.video-info-layer .text-link:hover::after {
+    height: 2px;
+}
+
+.video-box {
+    margin: 0 -24px;
+}
+
+.video-box video {
+    width: 100%;
+}
+
+/* safety 섹션 */
+.safety-details h2 {
+    margin-bottom: 12px;
+    font-family: UberMove;
+    font-weight: 500;
+    color: #000;
+}
+
+.safety-details p {
+    font-size: 1.6rem;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.safety-details .here-link {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* sitemap 정보섹션 */
+.sitemap-info div:last-child {
+    margin: 0;
+}
+
+.sitemap-info .description {
+    margin: 0 0 15px;
+}
+
+.sitemap-info .description dt {
+    margin-bottom: 12px;
+    font-family: Ubermove;
+    font-size: 1.8rem;
+    line-height: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.sitemap-info .description dd {
+    margin-bottom: 12px;
+    color: currentColor;
+    font-size: 1.6rem;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.sitemap-info .description dd:last-child {
+    margin: 0;
+}
+
+/* signup list 섹션 */
+.signup-list li a {
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+.signup-list li a::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.signup-list p {
+    float: left;
+    width: 70%;
+    font-family: Ubermove;
+    font-weight: 500;
+    line-height: 44px;
+    word-break: keep-all;
+    color: #000;
+}
+
+.signup-list a:hover {
+    border-bottom-color: #276efe;
+    transition: all .4s;
+}
+
+.signup-list a:hover p {
+    color: #276efe;
+    transition: all .4s;
+}
+
+.signup-list a:hover svg {
+    fill: #276efe;
+    transition: all .4s;
+}
+
+.signup-list span {
+    float: right;
+    width: 30%;
+    line-height: 36px;
+}
+
+.signup-list svg {
+    float: right;
+    line-height: 24px;
+    width: 30px;
+    height: 44px;
+    color: #000;
+}
+
+/* 모바일 ~ 태블릿 */
+@media all and (max-width: 1032px) {
+
+    /* main */
+    #main {
+        padding: 0 24px;
+    }
+
+    /* products 공통부분 */
+    .detail-text {
+        min-height: 300px;
+    }
+
+    .detail-text em {
+        font-size: 3.6rem;
+        line-height: 40px;
+    }
+
+    .product-outer {
+        margin: 40px 0 0;
+    }
+
+    .ride-bg {
+        display: none;
+    }
+
+    /* service 섹션 */
+    .service {
+        padding: 30px 0 60px;
+    }
+
+    .service-info {
+        margin: 0 0 30px;
+    }
+
+    .service-info h2 {
+        font-size: 3.6rem;
+    }
+
+    /* ad-video 아티클 */
+    .ad-video {
+        margin-bottom: 94px;
+    }
+
+    .video-info-layer {
+        left: -24px;
+        padding: 30px 24px;
+    }
+
+    .video-info-layer p {
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 2.8rem;
+        line-height: 36px;
+    }
+
+    .youtube-link {
+        margin-bottom: 24px;
+    }
+
+    .video-info-layer svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .video-info-layer span {
+        line-height: 3.6rem;
+    }
+
+    .video-box {
+        margin: 0 -24px;
+    }
+
+    .video-box video {
+        width: 100%;
+    }
+
+    /* safety 섹션 */
+    .safety-details {
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
+
+    .safety-details h2 {
+        font-size: 2.8rem;
+        line-height: 36px;
+    }
+
+    .safety-bg {
+        padding: 87px 0;
+    }
+
+    .safety-bg img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* sitemap 정보섹션 */
+    .sitemap-info {
+        padding: 30px 0;
+    }
+
+    .sitemap-info img {
+        margin-bottom: 24px;
+    }
+
+    .sitemap-info div {
+        margin-bottom: 30px;
+    }
+
+    /* sitemap 정보섹션 */
+    .sitemap-info div:last-child {
+        margin: 0;
+    }
+
+    .sitemap-info .description dt {
+        margin-bottom: 12px;
+        font-size: 1.8rem;
+        line-height: 24px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .sitemap-info .description dd {
+        margin-bottom: 12px;
+        color: currentColor;
+        font-size: 1.6rem;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    /* signup list 섹션 */
+    .signup-list {
+        padding: 30px 0;
+    }
+
+    .signup-list li {
+        margin-bottom: 50px;
+    }
+
+    .signup-list p {
+        font-size: 2.8rem;
+    }
+
+    .signup-list span {
+        float: right;
+        width: 30%;
+        line-height: 36px;
+    }
+
+    .signup-list li a {
+        padding-bottom: 30px;
+    }
+}
+
+/* PC 해상도일때 */
+@media all and (min-width: 1033px) {
+    /* main */
+    #main {
+        max-width: 1032px;
+        margin: 0 auto;
+    }
+
+    .products {
+        position: relative;
+        min-height: 724px;
+        margin: 0 -124px;
+        padding: 64px 124px;
+    }
+
+    .product-outer {
+        display: inline-block;
+    }
+
+    .detail-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        margin: 0;
+    }
+
+    .detail-img img {
+        height: 100%;
+    }
+
+    .product-panel {
+        width: 492px;
+        background: #fff;
+    }
+
+    .product-panel[aria-labelledby="prod-ride-tab"] {
+        overflow: hidden;
+        width: 100%;
+        height: 416px;
+    }
+
+    .detail-text {
+        padding: 64px 48px 48px;
+    }
+
+    .detail-text em {
+        font-size: 5.2rem;
+        line-height: 56px;
+    }
+
+    .product-panel:not([aria-labelledby="prod-ride-tab"]) .detail-img {
+        opacity: 1;
+    }
+
+    .product-panel:not([aria-labelledby="prod-ride-tab"]).on .detail-img, .product-panel.on .ride-bg {
+        animation: fade-in 3s cubic-bezier(.17,.67,.44,.85) forwards;
+    }
+
+    .product-panel[aria-labelledby="prod-ride-tab"] .detail-text {
+        float: left;
+        width: 492px;
+    }
+
+    .product-panel[aria-labelledby="prod-ride-tab"] .detail-img {
+        float: right;
+        position: static;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        width: 540px;
+    }
+
+    .ride-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: 0;
+        opacity: 1;
+    }
+
+    .video-box {
+        margin: 0;
+    }
+
+    @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+
+    .service {
+        position: relative;
+        margin: 0 -124px 64px;
+    }
+
+    .service-info {
+        position: absolute;
+        top: 64px;
+        left: 128px;
+        width: 407px;
+    }
+
+    .service-info h2 {
+        font-size: 52px;
+        line-height: 56px;
+    }
+
+    .ad-video {
+        margin: 0 -124px 128px;
+    }
+
+    .video-info-layer {
+        padding: 64px 124px;
+    }
+
+    .video-info-layer p {
+        margin: 0 0 24px;
+        font-size: 3.6rem;
+        line-height: 40px;
+    }
+
+    .video-info-layer svg {
+        width: 56px;
+        height: 40px;
+    }
+
+    .video-info-layer span {
+        line-height: 40px;
+    }
+
+    .youtube-link {
+        margin: 0 0 40px;
+    }
+
+    .safety {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .safety-details {
+        flex-basis: 40%;
+    }
+
+    .safety-details h2 {
+        font-size: 3.6rem;
+        line-height: 40px;
+    }
+
+    .safety-bg {
+        flex-basis: 50%;
+        height: 330px;
+    }
+
+    .safety-bg img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sitemap-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 64px 0;
+    }
+
+    .sitemap-info > div {
+        flex-basis: 30%;
+    }
+
+    .sitemap-info img {
+        margin: 0 0 20px;
+    }
+
+    .signup-list {
+        overflow: hidden;
+        padding: 64px 0;
+    }
+
+    .signup-list li {
+        float: left;
+        width: 40%;
+        margin: 0 0 0 20%;
+    }
+
+    .signup-list li:first-child {
+        margin-left: 0;
+    }
+
+    .signup-list li a {
+        padding: 0 0 55px;
+    }
+
+    .signup-list p {
+        font-size: 3.6rem;
+        line-height: 44px;
+    }
+
+    .signup-list svg {
+        width: 44px;
+        height: 44px;
+    }
+}

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uber Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+	<script src="./assets/js/jquery-3.2.1.min.js"></script>
+	<script src="./assets/js/header.js" defer></script>
+	<script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-inner">
+                <h1 class="logo">
+                    <a href="#self">
+                        <svg role="img" viewBox="0 0 154 52" fill="#fff">
+                            <title>Uber</title>
+                            <path d="M8.088 31.704c0 8.136 5.328 13.392 12.384 13.392 6.984 0 12.384-5.4 12.384-13.392V.6h7.56V51h-7.488v-4.68c-3.384 3.528-8.064 5.544-13.32 5.544-10.8 0-19.08-7.848-19.08-19.728V.6h7.56v31.104zM47.832 51V.6h7.272v18.36a18.156 18.156 0 0 1 13.032-5.472c10.8 0 19.296 8.568 19.296 19.224 0 10.584-8.496 19.152-19.296 19.152-5.112 0-9.792-2.088-13.104-5.472V51h-7.2zm7.128-18.288c0 7.056 5.616 12.744 12.672 12.744 6.912 0 12.6-5.688 12.6-12.744 0-7.128-5.688-12.744-12.6-12.744-6.984 0-12.672 5.616-12.672 12.744zm36.792-.072c0-10.368 8.136-19.08 18.864-19.08 10.584 0 18.36 8.136 18.36 19.08v2.376h-29.88c1.008 5.976 5.976 10.44 12.168 10.44 4.248 0 7.848-1.728 10.584-5.4l5.256 3.888c-3.672 4.896-9.144 7.848-15.84 7.848-11.016 0-19.512-8.208-19.512-19.152zm18.72-12.744c-5.4 0-9.936 3.744-11.232 9.36h22.392c-1.224-5.616-5.76-9.36-11.16-9.36zm42.696.864h-3.024c-4.752 0-8.208 3.672-8.208 9.36V51h-7.272V14.28h7.2v4.536c1.8-2.952 4.752-4.824 8.784-4.824h2.52v6.768z"/>
+                        </svg>
+                    </a>
+                </h1>
+                <div class="util-box">
+                    <ul class="util-list clear-fix">
+                        <li class="language">
+                            <a href="#self" class="language-btn">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                                    <title>EN</title>
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z"></path>
+                                </svg>
+                                EN
+                            </a>
+                        </li>
+                        <li class="member">
+                            <a href="#self" class="login-btn" aria-labelledby="menu-login" aria-selected="false">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <title>Log in</title>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z"></path>
+                                </svg>
+                                Log in
+                            </a>
+                        </li>
+                        <li class="member"><a href="#self" aria-labelledby="menu-join" aria-selected="false" class="signup-btn">Sign up</a></li>
+                    </ul>
+                    <button type="button" class="nav-btn" aria-label="navigation button">
+                        <span>gnb button</span>
+                    </button>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="#self">Our products</a></li>
+                    <li><a href="#self">Our company</a></li>
+                    <li><a href="#self">Safety</a></li>
+                    <li><a href="#self">Help</a></li>
+                </ul>
+            </div>
+            <nav class="navigation">
+                <h2 class="a11y-hidden">Global menu</h2>
+                <section id="menu-login" class="menu-login-area" aria-hidden="true">
+                    <h3 class="a11y-hidden">Login area</h3>
+                    <ul class="type-list">
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm0 3c3.9 0 7.1 2.8 7.9 6.5h-3.1c-.6-2-2.5-3.5-4.7-3.5S8 8.5 7.4 10.5H4.3C4.9 6.8 8.1 4 12 4zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-7.9-.5h3.1c.5 1.5 1.7 2.8 3.2 3.2v3.1c-3.1-.6-5.6-3.1-6.3-6.3zm9.4 6.4v-3.1c1.5-.5 2.8-1.7 3.2-3.2h3.1c-.6 3.1-3.1 5.6-6.3 6.3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Driver login</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <p class="text">Find everything you need to track your success on the road.</p>
+                        </li>
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Rider login</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <p class="text">Manage your payment options, review trip history, and more.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="menu-signup" class="menu-signup-area" aria-hidden="true">
+                    <h3 class="a11y-hidden">Sign up area</h3>
+                    <ul class="type-list">
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm0 3c3.9 0 7.1 2.8 7.9 6.5h-3.1c-.6-2-2.5-3.5-4.7-3.5S8 8.5 7.4 10.5H4.3C4.9 6.8 8.1 4 12 4zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-7.9-.5h3.1c.5 1.5 1.7 2.8 3.2 3.2v3.1c-3.1-.6-5.6-3.1-6.3-6.3zm9.4 6.4v-3.1c1.5-.5 2.8-1.7 3.2-3.2h3.1c-.6 3.1-3.1 5.6-6.3 6.3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Sign up to drive</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z" fill="#000"></path>
+                                </svg>
+                            </span>
+                            <a href="#self">
+                                <p class="type-title">Sign up to ride</p>
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" width="44px" height="1em" fill="#000000" viewBox="0 0 36 36">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-gnb-area" aria-hidden="true">
+                    <h3 class="a11y-hidden">site navigation area</h3>
+                    <div class="language-btn-box">
+                        <a href="#self" class="language-btn">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <title>EN</title>
+                                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z" fill="currentColor"></path>
+                                </svg>
+                            </span>
+                            EN
+                        </a>
+                    </div>
+                    <ul class="depth2 clear-fix" role="tablist">
+                        <li class="on" role="tab">
+                            <button type="button">Our products</button>
+                        </li>
+                        <li role="tab">
+                            <button type="button">Our company</button>
+                        </li>
+                    </ul>
+                    <div class="depth3">
+                        <div class="gnb-list-box" role="tabpanel" aria-hidden="false">
+                            <h4 class="a11y-hidden">Our products menu</h4>
+                            <ul class="depth3-list">
+                                <li>
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
+                                        Ride
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">How it works</a></li>
+                                        <li><a href="#self">Price estimator</a></li>
+                                        <li><a href="#self">Safety</a></li>
+                                        <li><a href="#self">Find a city</a></li>
+                                        <li><a href="#self">Find an airport</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
+                                        Drive
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">How to sign up</a></li>
+                                        <li><a href="#self">Earnings</a></li>
+                                        <li><a href="#self">Driver app</a></li>
+                                        <li><a href="#self">Driver safety</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
+                                        Uber Eats
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Find a city</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
+                                        Uber for Business
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Resources</a></li>
+                                        <li><a href="#self">Uber for Business Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#self" aria-haspopup="true" aria-selected="false">
+                                        Freight
+                                        <span aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="#000"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <ul class="depth4-list">
+                                        <li><a href="#self">Overview</a></li>
+                                        <li><a href="#self">Blog</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gnb-list-box" role="tabpanel" aria-hidden="true">
+                            <h4 class="a11y-hidden">Our company menu</h4>
+                            <ul class="depth3-list">
+                                <li>
+                                    <a href="#self">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#self">How Uber works</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Global citizenship</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Newsroom</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Investor relations</a>
+                                </li>
+                                <li>
+                                    <a href="#self">Careers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cs-cite-box">
+                        <ul class="cs-list">
+                            <li><a href="#self">Safety</a></li>
+                            <li><a href="#self">Help</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </nav>
+        </header>
+        <main id="main" role="main">
+            <section class="products">
+                <h2 class="a11y-hidden">products</h2>
+                <div class="product-list">
+                    <ul role="tablist">
+                        <li class="product-list-tab on">
+                            <a href="#self" id="prod-earn-tab" role="tab" aria-selected="true" aria-controls="prod-earn">
+                                <img src="./assets/images/product-icon-graph.svg" alt="">
+                                <span>Earn</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-ride-tab" role="tab" aria-selected="false" aria-controls="prod-ride">
+                                <img src="./assets/images/product-icon-car.svg" alt="">
+                                <span>Ride</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-eat-tab" role="tab" aria-selected="false" aria-controls="prod-eat">
+                                <img src="./assets/images/product-icon-eats.svg" alt="">
+                                <span>Eat</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-freight-tab" role="tab" aria-selected="false" aria-controls="prod-freight">
+                                <img src="./assets/images/product-icon-truck.svg" alt="">
+                                <span>Freight</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-business-tab" role="tab" aria-selected="false" aria-controls="prod-business">
+                                <img src="./assets/images/product-icon-business.svg" alt="">
+                                <span>Business</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-transit-tab" role="tab" aria-selected="false" aria-controls="prod-transit">
+                                <img src="./assets/images/product-icon-subway.svg" alt="">
+                                <span>Transit</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-bike-tab" role="tab" aria-selected="false" aria-controls="prod-bike">
+                                <img src="./assets/images/product-icon-bike.svg" alt="">
+                                <span>Bike</span>
+                            </a>
+                        </li>
+                        <li class="product-list-tab">
+                            <a href="#self" id="prod-fly-tab" role="tab" aria-selected="false" aria-controls="prod-fly">
+                                <img src="./assets/images/product-icon-airplane.svg" alt="">
+                                <span>Fly</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-outer">
+                    <div class="product-panel on" id="prod-earn" role="tabpanel" aria-labelledby="prod-earn-tab">
+                        <div class="detail-text">
+                            <em>Get in the driver's seat and get paid</em>
+                            <p>Drive on the largest network of active riders.</p>
+                            <a href="#self" class="btn-link">Sign up to drive</a>
+                            <div class="text-link-box">
+                                <a href="#self" class="text-link">Learn more about driving and delivering</a>
+                            </div>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/earn_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-ride" role="tabpanel" aria-labelledby="prod-ride-tab">
+                        <div class="detail-text">
+                            <em>Request a ride now</em>
+                            <form class="request-input-box">
+                                <fieldset class="pickup">
+                                    <label for="user-location" class="a11y-hidden">pickup location</label>
+                                    <input type="text" id="user-location" name="pickup" placeholder="Enter pickup location" required>
+                                    <a href="#self">
+                                        <svg aria-hidden="true" focusable="false" fill="#c5c5c5" viewBox="0 0 24 24" tabindex="0" role="button" aria-label="Locate me" class="pe-location-fetch bi ys fr yt s7 yu">
+                                            <path d="M10.5 13.5L.5 11 21 3l-8 20.5-2.5-10z"></path>
+                                        </svg>
+                                    </a>
+                                </fieldset>
+                                <fieldset class="destination">
+                                    <label for="user-destination" class="a11y-hidden">Enter destination</label>
+                                    <input type="text" id="user-destination" name="destination" placeholder="Enter destination" required>
+                                    <a href="#self" role="button">
+                                        <svg viewBox="0 0 24 24" fill="#c5c5c5">
+                                            <title>Arrow right (filled)</title>
+                                            <path d="M22.2 12l-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9z"></path>
+                                        </svg>
+                                    </a>
+                                </fieldset>
+                            </form>
+                            <div class="text-link-box">
+                                <a href="#self" class="text-link">Learn more about riding</a>
+                            </div>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/map.jpg" alt="">
+                        </div>
+                        <div class="ride-bg">
+                            <img src="./assets/images/ride_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-eat" role="tabpanel" aria-labelledby="prod-eat-tab">
+                        <div class="detail-text">
+                            <em>Delicious eats, delivered easy</em>
+                            <p>The restaurants you love, delivered to your door.</p>
+                            <a href="#self" class="btn-link">Order now</a>
+                            <div class="text-link-box">
+                                <a href="#self" class="text-link">Own a restaurant? Partner with Uber Eats</a>
+                            </div>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/Eats_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-freight" role="tabpanel" aria-labelledby="prod-freight-tab">
+                        <div class="detail-text">
+                            <em>A new direction for freight</em>
+                            <p>Greater transparency for shippers and carriers to do business together.</p>
+                            <a href="#self" class="btn-link">Get shipper details</a>
+                            <div class="text-link-box">
+                                <a href="#self" class="text-link">Sign up to be a carrier</a>
+                            </div>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/Freight_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-business" role="tabpanel" aria-labelledby="prod-business-tab">
+                        <div class="detail-text">
+                            <em>Move your teams and employees</em>
+                            <p>Uber for Business helps to simplify business travel, expensing, and customer experiences.</p>
+                            <a href="#self" class="btn-link">Learn more</a>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/Business_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-transit" role="tabpanel" aria-labelledby="prod-transit-tab">
+                        <div class="detail-text">
+                            <em>Public transit in the app</em>
+                            <p>Plan your transit journey using real-time information and step-by-step directions right in the app.</p>
+                            <a href="#self" class="btn-link">Learn more</a>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/Transit_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-bike" role="tabpanel" aria-labelledby="prod-bike-tab">
+                        <div class="detail-text">
+                            <em>Bike or scoot there, with JUMP</em>
+                            <p>Go farther and have more fun with electric bikes and scooters.</p>
+                            <a href="#self" class="btn-link">Get a ride</a>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/bikes_2x.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-panel" id="prod-fly" role="tabpanel" aria-labelledby="prod-fly-tab">
+                        <div class="detail-text">
+                            <em>Ridesharing at new heights</em>
+                            <p>Building the future of transportation with urban aerial ridesharing.</p>
+                            <a href="#self" class="btn-link">Learn more</a>
+                        </div>
+                        <div class="detail-img">
+                            <img src="./assets/images/Fly_2x.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service">
+                <div class="service-info">
+                    <h2>Setting 700+ cities in motion</h2>
+                    <a href="#self" class="text-link">View all cities</a>
+                </div>
+                <div class="service-bg">
+                    <img src="./assets/images/Modalities_banner_home.jpg" alt="">
+                </div>
+            </section>
+            <article class="ad-video">
+                <h2 class="a11y-hidden">Uber video for AD</h2>
+                <div class="video-info-layer">
+                    <p>You move the world</p>
+                    <a href="#self" class="youtube-link">
+                        <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 65 45">
+                            <path d="M54 0H11C4.9 0 0 4.9 0 11v23c0 6.1 4.9 11 11 11h43c6.1 0 11-4.9 11-11V11c0-6.1-4.9-11-11-11zm-8.8 22.9l-19.5 10c-.2.1-.5 0-.7-.2 0-.1-.1-.1-.1-.2v-20c0-.3.2-.5.5-.5.1 0 .2 0 .2.1l19.5 10c.2.1.3.4.2.7.1 0 0 .1-.1.1z"></path>
+                        </svg>
+                        <span>Play the video</span>
+                    </a>
+                    <a href="#self" class="text-link">See the stories</a>
+                </div>
+                <div class="video-box" aria-hidden="true">
+                    <video src="./assets/video/ad-video.mp4" muted autoplay loop></video>
+                </div>
+            </article>
+            <section class="safety">
+                <div class="safety-details">
+                    <h2>Our commitment to your safety</h2>
+                    <p>
+                        With every safety feature we add and every standard in our Community Guidelines we uphold, we’re committed to protecting you on the road ahead. Learn more about our Community Guidelines <a href="#self" class="here-link">here</a>.
+                    </p>
+                    <a href="#self" class="text-link">See all safety features</a>
+                </div>
+                <div class="safety-bg">
+                    <img src="./assets/images/Safety_ilo.svg" alt="">
+                </div>
+            </section>
+            <div class="sitemap-info">
+                <div>
+                    <img src="./assets/images/person-multiple-outlined.svg" alt="about-icon">
+                    <dl class="description">
+                        <dt>About us</dt>
+                        <dd>Find out how we started, what drives us, and how we’re igniting opportunity.</dd>
+                    </dl>
+                    <a href="#self" class="text-link">Learn more</a>
+                </div>
+                <div>
+                    <img src="./assets/images/document-outlined.svg" alt="newsroom-icon">
+                    <dl class="description">
+                        <dt>Newsroom</dt>
+                        <dd>See announcements about our latest releases, initiatives, and partnerships.</dd>
+                    </dl>
+                    <a href="#self" class="text-link">Learn more</a>
+                </div>
+                <div>
+                    <img src="./assets/images/home-outlined.svg" alt="citizenship-icon">
+                    <dl class="description">
+                        <dt>Global citizenship</dt>
+                        <dd>Read about our commitment to making a positive impact in the cities we serve.</dd>
+                    </dl>
+                    <a href="#self" class="text-link">Learn more</a>
+                </div>
+            </div>
+            <ul class="signup-list">
+                <li>
+                    <a href="#self">
+                        <p>Sign up to drive</p>
+                        <span>
+                            <svg aria-hidden="true" focusable="false" fill="#000000" viewBox="0 0 36 36">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#self">
+                        <p>Sign up to ride</p>
+                        <span>
+                            <svg aria-hidden="true" focusable="false" fill="#000000" viewBox="0 0 36 36">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2354 2H24.2711L36 18L24.2711 34H18.2354L28.1237 20.56H0V15.44H28.1237L18.2354 2Z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <a href="#self" class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 52" fill="#fff">
+                            <path d="M8.088 31.704c0 8.136 5.328 13.392 12.384 13.392 6.984 0 12.384-5.4 12.384-13.392V.6h7.56V51h-7.488v-4.68c-3.384 3.528-8.064 5.544-13.32 5.544-10.8 0-19.08-7.848-19.08-19.728V.6h7.56v31.104zM47.832 51V.6h7.272v18.36a18.156 18.156 0 0 1 13.032-5.472c10.8 0 19.296 8.568 19.296 19.224 0 10.584-8.496 19.152-19.296 19.152-5.112 0-9.792-2.088-13.104-5.472V51h-7.2zm7.128-18.288c0 7.056 5.616 12.744 12.672 12.744 6.912 0 12.6-5.688 12.6-12.744 0-7.128-5.688-12.744-12.6-12.744-6.984 0-12.672 5.616-12.672 12.744zm36.792-.072c0-10.368 8.136-19.08 18.864-19.08 10.584 0 18.36 8.136 18.36 19.08v2.376h-29.88c1.008 5.976 5.976 10.44 12.168 10.44 4.248 0 7.848-1.728 10.584-5.4l5.256 3.888c-3.672 4.896-9.144 7.848-15.84 7.848-11.016 0-19.512-8.208-19.512-19.152zm18.72-12.744c-5.4 0-9.936 3.744-11.232 9.36h22.392c-1.224-5.616-5.76-9.36-11.16-9.36zm42.696.864h-3.024c-4.752 0-8.208 3.672-8.208 9.36V51h-7.272V14.28h7.2v4.536c1.8-2.952 4.752-4.824 8.784-4.824h2.52v6.768z"/>
+                        </svg>
+                    </a>
+                    <ul class="footer-help">
+                        <li>
+                            <a href="#self">
+                                <span class="icon">
+                                    <svg aria-hidden="true" focusable="false" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 20.73A8.73 8.73 0 1 1 20.73 12 8.74 8.74 0 0 1 12 20.73z"></path>
+                                        <path d="M12 5.45a4.37 4.37 0 0 0-4.28 3.5l3.21.65A1.09 1.09 0 1 1 12 10.91H9.82v4.36h3.27V14A4.36 4.36 0 0 0 12 5.45zM9.82 16.7h3.27v1.85H9.82z"></path>
+                                    </svg>
+                                </span>
+                                Help Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#self">
+                                <span class="icon">
+                                    <svg aria-hidden="true" focusable="false" fill="currentColor" viewBox="0 0 23 23">
+                                        <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                English
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#self">
+                                <span class="icon">
+                                    <svg aria-hidden="true" focusable="false" fill="currentColor" viewBox="0 0 17 17">
+                                        <path d="M11.477 12.274l-3.615 2.72-3.614-2.72a5.7 5.7 0 0 1-1.953-4.312c0-3.131 2.492-5.671 5.567-5.671 3.076 0 5.567 2.54 5.567 5.67a5.7 5.7 0 0 1-1.952 4.313M7.862 0C3.52 0 0 3.586 0 8.008a8.041 8.041 0 0 0 3.318 6.536l.024-.049-.023.049L7.862 18l4.544-3.456-.023-.049.023.049a8.042 8.042 0 0 0 3.319-6.536C15.725 3.586 12.205 0 7.862 0"></path><path d="M6.638 6.628a1.788 1.788 0 0 0 0 2.495c.676.69 1.773.69 2.449 0a1.786 1.786 0 0 0 0-2.495 1.71 1.71 0 0 0-2.45 0"></path>
+                                    </svg>
+                                </span>
+                                Seoul
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-sitemap">
+                        <div>
+                            <a href="#self" id="footer-about">About us</a>
+                            <ul class="footer-sitemap-list" aria-labelledby="footer-about">
+                                <li><a href="#self">Newsroom</a></li>
+                                <li><a href="#self">Investor relations</a></li>
+                                <li><a href="#self">Global citizenship</a></li>
+                                <li><a href="#self">Safety</a></li>
+                                <li><a href="#self">Blog</a></li>
+                                <li><a href="#self">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#self" id="footer-product">Our products</a>
+                            <ul class="footer-sitemap-list" aria-labelledby="footer-product">
+                                <li><a href="#self">Ride</a></li>
+                                <li><a href="#self">Drive</a></li>
+                                <li><a href="#self">Eat</a></li>
+                                <li><a href="#self">Business</a></li>
+                                <li><a href="#self">Freight</a></li>
+                                <li><a href="#self">Health</a></li>
+                                <li><a href="#self">Uber Air</a></li>
+                                <li><a href="#self">Advanced Technologies Group</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="download-apps">
+                        <a href="#self"><img src="./assets/images/app-down.svg" alt="appStore download button"></a>
+                        <a href="#self"><img src="./assets/images/google-down.svg" alt="googlePlay download button"></a>
+                    </div>
+                    <div class="footer-sns">
+                        <ul class="clear-fix">
+                            <li>
+                                <a href="#self">
+                                    <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                        <title>Facebook Shortcut button</title>
+                                        <path d="M36.463 60h-10.5V32h-7v-9.625h7v-5.6C25.963 8.725 28.063 4 37.338 4h7.7v9.625h-4.9c-3.675 0-3.85 1.4-3.85 3.85v4.9h8.75L44.163 32h-7.7v28z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#self">
+                                    <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                        <title>Twitter Shortcut button</title>
+                                        <path d="M58 15.877c-1.94.812-3.89 1.462-6.155 1.625 2.265-1.3 3.89-3.402 4.703-5.83-2.103 1.3-4.378 2.103-6.805 2.59-1.777-2.102-4.702-3.402-7.617-3.402-5.83 0-10.695 4.702-10.695 10.694 0 .813.163 1.625.325 2.428C22.85 23.494 15.07 19.279 9.727 12.8c-.975 1.625-1.462 3.402-1.462 5.342 0 3.727 1.94 6.967 4.702 8.907-1.777 0-3.402-.488-4.865-1.3v.162c0 5.18 3.728 9.395 8.582 10.37-.975.162-1.777.325-2.752.325-.65 0-1.3 0-1.94-.163 1.3 4.215 5.342 7.293 9.882 7.455-3.565 2.915-8.257 4.54-13.284 4.54-.813 0-1.777 0-2.59-.163a29.893 29.893 0 0 0 16.362 4.865c19.601 0 30.296-16.199 30.296-30.296v-1.3c2.102-1.787 3.89-3.565 5.342-5.667z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#self">
+                                    <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 24 24">
+                                        <title>Youtube Shortcut button</title>
+                                        <path d="M23.5 6.2c-.3-1-1.1-1.9-2.1-2.1-1.9-.6-9.4-.6-9.4-.6s-7.5 0-9.4.5C1.6 4.3.8 5.1.5 6.1 0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.9 2.1 2.1 1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5c1-.3 1.8-1.1 2.1-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zm-14 9.4V8.4l6.3 3.6-6.3 3.6z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#self">
+                                    <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                        <title>linkedIn Shortcut button</title>
+                                        <path d="M48.172 7.998H15.974C11.611 7.998 8 11.61 8 15.973v31.9c0 4.514 3.61 8.125 7.974 8.125h32.047c4.364 0 7.974-3.61 7.974-7.974V15.973c.15-4.364-3.46-7.975-7.823-7.975zm-25.54 40.017h-7.166v-21.8h7.167v21.8zM19.05 23.229c-2.538 0-4.031-1.643-4.031-3.733s1.642-3.733 4.031-3.733c2.539 0 4.032 1.642 4.032 3.733.15 2.09-1.493 3.733-4.032 3.733zm29.714 24.786h-7.167V36.368c0-2.986-1.045-4.927-3.733-4.927-1.941 0-3.135 1.344-3.733 2.688a5.569 5.569 0 0 0-.298 1.791v12.095h-7.168s.15-19.71 0-21.8h7.168v3.136c.896-1.494 2.687-3.584 6.57-3.584 4.778 0 8.361 3.136 8.361 9.855v12.393z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#self">
+                                    <svg aria-hidden="true" focusable="false" fill="white" viewBox="0 0 64 64">
+                                        <title>Instargram Shortcut button</title>
+                                        <path d="M58.022 21.275c-.178-2.671-.534-4.63-1.247-6.233-.712-1.78-1.602-3.205-3.027-4.63-1.425-1.425-2.85-2.315-4.63-3.027-1.603-.713-3.562-1.069-6.233-1.247-2.85-.178-3.74-.178-10.685-.178s-7.836 0-10.685.178c-2.671.178-4.63.534-6.233 1.247-1.78.712-3.205 1.602-4.63 3.027-1.425 1.425-2.315 2.85-3.027 4.63-.713 1.603-1.069 3.562-1.247 6.233C6.2 23.946 6.2 24.837 6.2 31.96s0 7.836.178 10.685c.178 2.671.534 4.63 1.247 6.233.712 1.78 1.602 3.205 3.027 4.63 1.425 1.425 2.85 2.315 4.63 3.027 1.603.713 3.562 1.069 6.233 1.247 2.671.178 3.562.178 10.685.178s7.836 0 10.685-.178c2.671-.178 4.63-.534 6.233-1.247 1.78-.712 3.205-1.602 4.63-3.027 1.425-1.425 2.315-2.85 3.027-4.63.713-1.603 1.069-3.562 1.247-6.233.178-2.671.178-3.562.178-10.685s0-7.836-.178-10.685zm-4.63 21.192c-.178 2.493-.534 3.918-.89 4.808-.535 1.247-1.069 2.137-1.96 3.028-.89.89-1.78 1.424-3.027 1.959-.89.356-2.315.712-4.808.89-2.671.178-3.562.178-10.507.178s-7.658 0-10.507-.178c-2.493-.178-3.918-.534-4.808-.89-1.247-.535-2.137-1.069-3.028-1.96-.89-.89-1.424-1.78-1.959-3.027-.356-.89-.712-2.315-.89-4.808-.178-2.671-.178-3.562-.178-10.507s0-7.658.178-10.507c.178-2.493.534-3.918.89-4.808.535-1.247 1.069-2.137 1.96-3.027.89-.89 1.78-1.425 3.027-1.96.89-.356 2.315-.712 4.808-.89 2.85-.178 3.562-.178 10.507-.178s7.657 0 10.507.178c2.493.178 3.918.534 4.808.89 1.247.535 2.137 1.07 3.028 1.96.89.89 1.424 1.78 1.958 3.027.357.89.713 2.315.89 4.808.179 2.671.179 3.562.179 10.507s0 7.658-.178 10.507z"></path><path d="M32.2 18.604c-7.301 0-13.178 5.877-13.178 13.178S24.899 44.96 32.2 44.96c7.301 0 13.178-5.877 13.178-13.178S39.501 18.604 32.2 18.604zm0 21.726c-4.808 0-8.548-3.918-8.548-8.548s3.918-8.548 8.548-8.548 8.548 3.918 8.548 8.548-3.74 8.548-8.548 8.548zM46.09 15.042c-1.603 0-3.027 1.425-3.027 3.027s1.246 3.028 3.027 3.028c1.603 0 3.027-1.247 3.027-3.028s-1.424-3.205-3.027-3.027z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-legal">
+                        <li><a href="#self">Privacy</a></li>
+                        <li><a href="#self">Accessibility</a></li>
+                        <li><a href="#self">Terms</a></li>
+                    </ul>
+                    <small class="copyright">&copy; 2019 Uber Technologies Inc.</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+/* all device */
+
+#header {
+    background-color: #000;
+    display: block;
+    width: 100%;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 24px;
+}
+
+.logo a {
+    display: block;
+    padding: 17px 0;
+}
+
+.logo svg {
+    width: 50px;
+    height: 16px;
+}
+
+.logo svg:hover {
+    transition-duration: 0.5s;
+    fill: #276efe;
+}
+
+.util-box {
+    display: flex;
+    align-items: center;
+}
+
+.util-list {
+    margin: 0 10px 0 0;
+}
+
+.util-list li {
+    float: left;
+}
+
+.util-list li:first-child {
+    margin-left: 0;
+}
+
+.util-list a {
+    display: block;
+}
+
+.util-list a svg {
+    display: none;
+}
+
+.util-list a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 12px;
+    color: #fff;
+}
+
+.util-list .login-btn:hover {
+    transition-duration: 0.3s;
+    color: #276efe;
+}
+
+.util-list .signup-btn {
+    background: #eeeeee;
+    color: #000;
+}
+
+.util-list .signup-btn:hover {
+    transition-duration: 0.3s;
+    background: #e2e2e2;
+}
+
+
+/* 모바일 ~ 태블릿 */
+
+@media all and (max-width: 1032px) {
+    #header {
+        height: 50px;
+    }
+
+    .util-list li {
+        margin: 0 0 0 10px;
+    }
+
+    .util-list li.language {
+        display: none;
+    }
+
+    .nav-btn {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        background: none;
+        border: none;
+        padding: 0 6px;
+        margin-left: 6px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        transition: all .4s;
+    }
+
+    .nav-btn::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 6px;
+        right: 6px;
+        width: 16px;
+        height: 2px;
+        background: #fff;
+        transition: all .4s;
+    }
+
+    .nav-btn::after {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 6px;
+        right: 6px;
+        width: 16px;
+        height: 2px;
+        background: #fff;
+        transition: all .4s;
+    }
+
+    .nav-btn span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        right: 6px;
+        width: 16px;
+        height: 2px;
+        margin: -1px 0 0;
+        background: #ffffff;
+        text-indent: -28px;
+        transition: all .4s;
+    }
+
+    .nav-btn:hover::before, .nav-btn:hover::after, .nav-btn:hover span {
+        background: #276efe;
+    }
+
+    .nav-btn.close {
+        transform: rotate(360deg);
+    }
+
+    .nav-btn.close::before {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+
+    .nav-btn.close::after {
+        bottom: 13px;
+        transform: rotate(-45deg);
+    }
+
+    .nav-btn.close span {
+        opacity: 0;
+    }
+
+    .nav-btn:hover svg {  /* 수정 해야함! */
+        transition-duration: 0.3s;
+        fill: #276efe;
+    }
+
+    .menu-list {
+        display: none;
+    }
+}
+
+ /* PC 해상도일때 */
+
+@media all and (min-width: 1033px) {
+
+    #header {
+        height: 70px;
+    }
+
+    .header-inner {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1030px;
+    }
+
+    .logo a {
+        display: block;
+    }
+
+    .logo svg {
+        width: 50px;
+        height: 16px;
+    }
+
+    .logo svg:hover {
+        transition-duration: 0.5s;
+        fill: #276efe;
+    }
+
+    .util-box {
+        display: flex;
+        align-items: center;
+        order: 1;
+    }
+
+    .util-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .util-list li {
+        margin: 0 0 0 18px;
+    }
+
+    .util-list .language-btn, .util-list .login-btn {
+        position: relative;
+        color: #fff;
+        padding: 0 0 0 25px;
+        transition: all .4s;
+    }
+
+    .util-list .language-btn svg, .util-list .login-btn svg {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0;
+        fill: #fff;
+        transition: color .4s, fill .4s;
+    }
+
+    .util-list .language-btn:hover, .util-list .login-btn:hover {
+        color: #276efe;
+    }
+
+    .util-list .language-btn:hover svg, .util-list .login-btn:hover svg {
+        fill: #276efe;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-list {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 92px;
+    }
+
+    .menu-list li {
+        display: flex;
+        position: relative;
+        height: 70px;
+        margin: 0 0 0 4px;
+        color: #eee;
+        font-size: 14px;
+        font-weight: 500;
+        align-items: center;
+    }
+
+    .menu-list li:first-child {
+        margin: 0;
+    }
+
+    .menu-list a {
+        display: block;
+        padding: 10px 6px;
+    }
+
+    .menu-list a::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: 0;
+        height: 4px;
+        background: #276efe;
+        opacity: 0;
+        transition: all .4s ease-out;
+    }
+
+    .menu-list a:hover::after {
+        left: 0;
+        right: auto;
+        width: 100%;
+        opacity: 1;
+    }
+}
